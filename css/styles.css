@@ -364,3 +364,42 @@ img, video{
 .filter-btn.is-active{
   background:var(--accent, #0ea5e9); color:#fff; border-color:transparent;
 }
+/* ===== Fix desbordes en móvil (hueco lateral) ===== */
+
+/* Garantizar que nunca somos más anchos que la pantalla */
+html, body{
+  width:100%;
+  max-width:100%;
+}
+
+/* El contenedor no debe generar scroll lateral */
+.container{
+  overflow-x:hidden;
+}
+
+/* El grid del hero no debe forzar ancho extra */
+.hero{
+  overflow:hidden;        /* recorta cualquier píxel rebelde del fondo, etc. */
+}
+
+/* Las columnas pueden encoger correctamente */
+.hero > *{
+  min-width:0;
+}
+
+/* Evitar que el título “empuje” el ancho en móviles */
+.hero h1{
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+  hyphens:auto;
+}
+
+/* Por si acaso, asegurar que el drawer no se pasa de ancho en móvil */
+@media (max-width:860px){
+  .nav-drawer{
+    width:100%;
+    max-width:100%;
+    left:0;
+    right:0;
+  }
+}
