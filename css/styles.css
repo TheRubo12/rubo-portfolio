@@ -84,22 +84,33 @@ nav .left{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .scrim.show{ opacity:1; pointer-events:auto; }
 
 /* ========== NAV DRAWER COMPACTO ========== */
+/* Importante: por defecto OCULTO */
 .nav-drawer{
   position:fixed; top:0; right:0;
   height:100dvh; width:min(72vw,280px);
   padding:8px 6px 10px;
-  display:grid; gap:2px;
   background:rgba(10,14,30,.98);
   border-left:1px solid var(--bd);
   box-shadow: -10px 0 24px rgba(0,0,0,.45) inset;
   backdrop-filter: blur(8px);
-  transform:translateX(100%); transition:transform .22s ease;
+
+  /* estado inicial: NO se muestra */
+  display:none;
+  transform:translateX(100%);
+  transition:transform .22s ease;
   z-index:10;
+
   overflow:auto; overscroll-behavior:contain;
   padding-top:calc(8px + env(safe-area-inset-top, 0px));
   padding-bottom:calc(8px + env(safe-area-inset-bottom, 0px));
 }
-.nav-drawer.open{ transform:translateX(0); }
+
+/* Solo cuando está abierto en móvil */
+.nav-drawer.open{
+  display:grid;
+  gap:2px;
+  transform:translateX(0);
+}
 
 .nav-drawer a{
   display:block;
@@ -129,16 +140,33 @@ nav .left{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 
 /* Responsive visibilidad */
 @media (max-width:860px){
-  .hamburger{display:inline-flex; align-items:center; justify-content:center;}
+  .hamburger{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
 }
+
+/* En escritorio, el menú vuelve a ser horizontal normal */
 @media (min-width:861px){
   .scrim{display:none}
   .hamburger{display:none}
+
   .nav-drawer{
-    position:static; transform:none; height:auto; width:auto;
-    padding:0; display:flex; align-items:center; gap:10px;
-    background:transparent; border:0; box-shadow:none; backdrop-filter:none;
+    position:static;
+    height:auto;
+    width:auto;
+    padding:0;
+    display:flex !important;      /* SIEMPRE visible en desktop */
+    align-items:center;
+    gap:10px;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+    backdrop-filter:none;
+    transform:none !important;
   }
+
   .nav-drawer a,
   .nav-drawer .btn{
     padding:8px 10px;
@@ -336,4 +364,3 @@ img, video{
 .filter-btn.is-active{
   background:var(--accent, #0ea5e9); color:#fff; border-color:transparent;
 }
-
