@@ -44,21 +44,35 @@ function $all(sel, ctx = document) { return Array.from(ctx.querySelectorAll(sel)
     btn.setAttribute('aria-expanded', 'true');
     panel.classList.add('open');
     panel.setAttribute('aria-hidden', 'false');
+
     scrim.hidden = false;
     requestAnimationFrame(() => scrim.classList.add('show'));
+
     lockScroll(true);
+
     const first = firstFocusable(panel);
     if (first) first.focus();
   }
 
-  function closeMenu() {
+  function closeMenu(options = {}) {
+    const { fromResize = false } = options;
+
     btn.setAttribute('aria-expanded', 'false');
     panel.classList.remove('open');
-    panel.setAttribute('aria-hidden', 'true');
     scrim.classList.remove('show');
     lockScroll(false);
-    setTimeout(() => { if (!panel.classList.contains('open')) scrim.hidden = true; }, 200);
-    if (lastFocus && document.contains(lastFocus)) lastFocus.focus();
+
+    // En móvil: el panel se oculta y aria-hidden debe ser true
+    // En escritorio (fromResize): el panel es visible como menú normal ⇒ aria-hidden false
+    panel.setAttribute('aria-hidden', fromResize ? 'false' : 'true');
+
+    setTimeout(() => {
+      if (!panel.classList.contains('open')) scrim.hidden = true;
+    }, 200);
+
+    if (!fromResize && lastFocus && document.contains(lastFocus)) {
+      lastFocus.focus();
+    }
   }
 
   btn.addEventListener('click', () => {
@@ -66,10 +80,22 @@ function $all(sel, ctx = document) { return Array.from(ctx.querySelectorAll(sel)
     expanded ? closeMenu() : openMenu();
   });
 
-  scrim.addEventListener('click', closeMenu);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
-  panel.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
-  window.addEventListener('resize', () => { if (window.innerWidth > 860) closeMenu(); });
+  scrim.addEventListener('click', () => closeMenu());
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  panel.addEventListener('click', (e) => {
+    if (e.target.closest('a')) closeMenu();
+  });
+
+  // Al pasar a escritorio, cerramos modo cajón pero dejamos el menú accesible
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860) {
+      closeMenu({ fromResize: true });
+    }
+  });
 })();
 
 /* ====== Copiar email (expuesto global) ====== */
@@ -136,7 +162,7 @@ window.filterProjects = function filterProjects(tag, el) {
 (() => {
   const wireCards = () => {
     $all('.open-pdf').forEach(card => {
-      // Evitar doble registro si se llama dos veces (por hot-reload, etc.)
+      // Evitar doble registro si se llama dos veces
       if (card.__wired) return;
       card.__wired = true;
 
@@ -180,37 +206,38 @@ window.filterProjects = function filterProjects(tag, el) {
   }
 })();
 
+/* ====== Filtros de proyectos (académico / personal / todos) ====== */
+(function () {
+  const grid = document.querySelector('[data-projects-grid]');
+  const buttons = document.querySelectorAll('.filter-btn');
+  if (!grid || !buttons.length) return;
 
-  (function () {
-    const grid = document.querySelector('[data-projects-grid]');
-    const buttons = document.querySelectorAll('.filter-btn');
-
-    function applyFilter(filter) {
-      const cards = grid.querySelectorAll('[data-category]');
-      cards.forEach(card => {
-        const cat = card.getAttribute('data-category');
-        const show = (filter === 'todos') || (cat === filter);
-        card.style.display = show ? '' : 'none';
-      });
-    }
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // estado visual + accesible
-        buttons.forEach(b => { 
-          b.classList.remove('is-active'); 
-          b.setAttribute('aria-selected', 'false'); 
-        });
-        btn.classList.add('is-active');
-        btn.setAttribute('aria-selected', 'true');
-
-        applyFilter(btn.dataset.filter);
-      });
+  function applyFilter(filter) {
+    const cards = grid.querySelectorAll('[data-category]');
+    cards.forEach(card => {
+      const cat = card.getAttribute('data-category');
+      const show = (filter === 'todos') || (cat === filter);
+      card.style.display = show ? '' : 'none';
     });
+  }
 
-    // Estado inicial
-    applyFilter('todos');
-  })();
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // estado visual + accesible
+      buttons.forEach(b => {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+
+      applyFilter(btn.dataset.filter);
+    });
+  });
+
+  // Estado inicial
+  applyFilter('todos');
+})();
 
 /* ====== Botón "Ver más" para listas .steps ====== */
 (() => {
