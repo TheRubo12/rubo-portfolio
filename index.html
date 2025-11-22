@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Rubén Vicente Gilabert — Pentester Junior (ASIR) · eJPTv2 en progreso</title>
+  <meta name="description" content="Portafolio técnico de Rubén Vicente Gilabert: estudiante de ASIR, eJPTv2 en progreso. Proyectos (apps y APIs), CTFs/Writeups con informes PDF y contacto. Disponible para prácticas / empleo." />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- Canonical + Open Graph + Twitter -->
+  <link rel="canonical" href="/">
+  <meta property="og:title" content="Rubén Vicente — Pentester Junior" />
+  <meta property="og:description" content="Proyectos técnicos, CTFs/Writeups y contacto. ASIR · eJPTv2 en progreso · Cisco Intro a Ciberseguridad." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/og-image.png" />
+  <meta property="og:url" content="/" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Rubén Vicente Gilabert — Pentester Junior" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rubén Vicente — Pentester Junior" />
+  <meta name="twitter:description" content="Proyectos, CTFs/Writeups y contacto. ASIR · eJPTv2 en progreso." />
+  <meta name="twitter:image" content="img/og-image.png" />
+
+  <!-- Prefetch del CV -->
+  <link rel="prefetch" href="CV_Ruben_Vicente_Gilabert.pdf" as="document" type="application/pdf">
+
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Schema: WebSite + Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "url":"https://tudominio.com/",
+    "name":"Rubén Vicente Gilabert — Pentester Junior",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://tudominio.com/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Rubén Vicente Gilabert",
+    "jobTitle":"Pentester Junior",
+    "url":"https://tudominio.com/",
+    "image":"img/avatar.jpg",
+    "email":"mailto:rubovicente@gmail.com",
+    "sameAs":[
+      "https://www.linkedin.com/in/rubovicente/",
+      "https://github.com/TheRubo12",
+      "https://tryhackme.com/p/TU_USUARIO",
+      "https://app.hackthebox.com/profile/TU_USUARIO"
+    ],
+    "knowsAbout":[ "Pentesting web","Active Directory","OWASP","PTES","Burp Suite","Nmap" ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <header>
+    <div class="container">
+      <nav role="navigation" aria-label="Principal">
+        <div class="left">
+          <div class="logo"><span class="dot" aria-hidden="true"></span><strong>Pentester Junior</strong></div>
+          <span class="badge">Disponible para prácticas/Empleo IT</span>
+        </div>
+
+        <!-- Botón hamburguesa (móvil) -->
+        <button class="hamburger focus-ring" id="nav-toggle"
+                aria-label="Abrir menú" aria-controls="primary-nav" aria-expanded="false">
+          <img src="img/menu-de-hamburguesas.png" alt="" aria-hidden="true" />
+          <span class="sr-only">Abrir menú</span>
+        </button>
+
+        <!-- Cajón lateral -->
+        <aside class="nav-drawer" id="primary-nav" aria-hidden="true">
+          <a class="badge focus-ring" href="#proyectos">Proyectos</a>
+          <a class="badge focus-ring" href="#skills">Skills</a>
+          <a class="badge focus-ring" href="#reportes">Reportes</a>
+          <a class="badge focus-ring" href="#contacto">Contacto</a>
+          <a class="btn focus-ring" href="CV_Ruben_Vicente_Gilabert.pdf" download>Descargar CV</a>
+        </aside>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Capa oscura cuando el menú está abierto -->
+  <div id="scrim" class="scrim" hidden></div>
+
+  <main id="inicio" role="main" class="container">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="pill">Busco <strong>practicas / empleo</strong> · Valencia/Castellón/Remoto</div>
+        <h1 id="hero-title">Hola, soy <span style="color:var(--acc)">Rubén</span>. <br/>Administrador de sistems y pentester junior enfocado en <em>Web, AD y CTFs</em>.</h1>
+        <p>Estudiante de <strong>ASIR</strong> y <strong>eJPTv2 (en progreso)</strong>. Me gusta romper cosas (con permiso) y escribir <strong>reportes claros</strong>. Practico en plataformas y laboratorios propios aplicando metodologías <abbr title="Open Web Application Security Project">OWASP</abbr> y PTES.</p>
+        <p>Busco <strong>mi oportunidad en IT</strong> donde pueda aportar mis conocimientos en automatización, hardening y resolución de incidencias.</p>
+        <div class="taglist" aria-label="Tecnologías principales">
+          <span class="tag">Burp Suite</span><span class="tag">Nmap</span><span class="tag">Linux</span>
+          <span class="tag">Python/Bash</span><span class="tag">Active Directory</span>
+          <span class="tag">OWASP Top 10</span><span class="tag">APIs · Hardening</span>
+        </div>
+        <div class="kpis" aria-label="Datos rápidos">
+          <div class="kpi"><div class="meta">Formación</div><strong>ASIR</strong> <span class="meta">· eJPTv2 en curso</span></div>
+          <div class="kpi"><div class="meta">Certs</div><strong>Cisco</strong> <span class="meta">Analista Junior</span></div>
+          <div class="kpi"><div class="meta">Curso</div><strong>120h</strong> <span class="meta">Ciberseguridad Avanzada TO</span></div>
+        </div>
+        <div style="margin-top:16px">
+          <a class="btn focus-ring" href="#contacto">Hablemos</a>
+          <a class="btn ghost focus-ring" href="#reportes">Ver reportes</a>
+        </div>
+      </div>
+      <div>
+        <div class="hero-card" aria-labelledby="contacto-rapido">
+          <h3 id="contacto-rapido">Datos de contacto</h3>
+          <div style="margin:8px 0 10px">
+            <div class="taglist">
+              <span class="tag">Valencia, ES</span>
+              <span class="tag">Remoto</span>
+              <span class="tag">Contrato / Prácticas</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span id="email-value">rubovicente@gmail.com</span>
+            <button id="copy-btn" class="btn focus-ring" type="button" onclick="copyEmail()">Copiar email</button>
+            <a class="btn ghost focus-ring" href="https://www.linkedin.com/in/rubovicente/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn ghost focus-ring" href="https://github.com/TheRubo12" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+          <div aria-live="polite" class="sr-only" id="copy-status"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Habilidades clave</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <h3>Redes &amp; Sistemas (ASIR)</h3>
+          <p class="meta">TCP/IP, VLANs, DNS/DHCP, routing básico, firewalling. Admin y hardening básico en Linux/Windows.</p>
+        </article>
+        <article class="card">
+          <h3>Recon & Enumeración</h3>
+          <p class="meta">
+            OSINT · DNS · Nmap · NSE · huella de red
+          </p>
+        </article>
+        <article class="card">
+          <h3>Web Pentesting (eJPTv2)</h3>
+          <p class="meta">OWASP Top 10 (SQLi, XSS, IDOR, auth/session) · Burp Suite · pruebas de autorización.</p>
+        </article>
+        <article class="card">
+          <h3>AD &amp; Post-Explotación</h3>
+          <p class="meta">Conceptos de Kerberoasting, BloodHound y privesc básica en Windows/Linux.</p>
+        </article>
+        <article class="card">
+          <h3>Scripting &amp; Tooling</h3>
+          <p class="meta">Python · Bash · C/C++ (bases) · automatización de enumeración y PoC simples.</p>
+        </article>
+        <article class="card">
+          <h3>Metodología &amp; Reporting</h3>
+          <p class="meta">OWASP WSTG · PTES · CVSS · reportes claros (PoC + impacto + mitigación).</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROYECTOS (con filtros) -->
+    <section id="proyectos" class="projects" aria-labelledby="proyectos-title">
+      <h2 id="proyectos-title">Proyectos técnicos</h2>
+
+      <!-- Filtros -->
+      <div class="filters" role="tablist" aria-label="Filtrar proyectos">
+        <button class="filter-btn is-active" role="tab" aria-selected="true" aria-controls="projects-grid"
+                data-filter="todos">Todos</button>
+        <button class="filter-btn" role="tab" aria-selected="false" aria-controls="projects-grid"
+                data-filter="academico">Académicos</button>
+        <button class="filter-btn" role="tab" aria-selected="false" aria-controls="projects-grid"
+                data-filter="personal">Personales</button>
+      </div>
+
+      <!-- Grid -->
+      <div id="projects-grid" class="grid cols-3" data-projects-grid>
+        <!-- Personales -->
+        <article class="card" data-category="personal">
+          <h3>NautiDocs – Gestión Inteligente de Documentación Náutica</h3>
+          <p class="meta">IA · NFC · Mobile App · Digitalización · MaritimeTech</p>
+          <p>
+            Plataforma digital diseñada para centralizar y automatizar la gestión de documentación náutica.
+            Incluye validación inteligente mediante IA, alertas automáticas de vencimientos, 
+            integración con NFC para check-in en puertos deportivos y una experiencia de usuario multilingüe.
+            El proyecto está actualmente en fase de desarrollo avanzado y orientado a su lanzamiento
+            comercial en Google Play y App Store.
+          </p>
+          <p>
+            <span class="btn disabled" aria-disabled="true">Próximamente</span>
+          </p>
+        </article>
+ 
+        <article class="card" data-category="personal">
+          <h3>Automatización Parte Diario – Google Apps Script</h3>
+          <p class="meta">Google Sheets · Apps Script · Automatización · Gestión Portuaria</p>
+          <p>
+            Desarrollo de un sistema completo para automatizar el parte diario de un puerto deportivo.
+            El script procesa los registros del turno de noche, genera automáticamente el parte del día
+            anterior y marca entradas y salidas en la hoja de ocupación del turno de mañana. Incluye detección
+            de movimientos, separación de pantalán/amarre, inserción inteligente de notas y actualización
+            dinámica de embarcaciones no registradas previamente.
+          </p>
+          <p>
+            <a class="btn" href="https://github.com/TheRubo12/puerto-parte-diario-automatizado" 
+              target="_blank" rel="noopener noreferrer">
+              Ver en GitHub
+            </a>
+          </p>
+        </article>
+        
+        <article class="card" data-category="personal">
+          <h3>Check-in – Gestión de entradas y reservas en puerto</h3>
+          <p class="meta">Flutter · Dart · Raspberry Pi 5 · Facturación · Reservas · Backend centralizado</p>
+          <p>
+            Aplicación móvil desarrollada con Flutter para registrar entradas de embarcaciones en puerto,
+            recopilar y validar su documentación y generar automáticamente la factura según las
+            características del barco y la estancia. Además, permite gestionar reservas de amarres y
+            sincroniza toda la información contra un servidor central en una Raspberry Pi 5, que aloja la
+            base de datos y coordina los usuarios de las distintas marinas participantes en la prueba piloto.
+          </p>
+          <p>
+            <span class="btn disabled" aria-disabled="true">En desarrollo</span>
+          </p>
+        </article>
+
+        <article class="card" data-category="personal">
+          <h3>Amarres Benicarló – Navegación guiada en puerto</h3>
+          <p class="meta">Leaflet · Geolocalización · Express · PWA · OSRM</p>
+          <p>
+            Aplicación web que guía al usuario desde su ubicación actual hasta un amarre 
+            específico dentro de un puerto deportivo. Incluye mapa interactivo con Leaflet,
+            seguimiento GPS en tiempo real, cálculo de rutas mediante OSRM y backend Express 
+            para cargar datos de amarres. Preparado como PWA para uso móvil fluido en puerto.
+          </p>
+          <p>
+            <span class="btn disabled" aria-disabled="true">Próximamente</span>
+          </p>
+        </article>
+
+        <!-- Académicos -->
+         <article class="card" data-category="academico">
+          <h3>DevOps &amp; Cloud – Go + Docker</h3>
+          <p class="meta">Go · Docker · REST API · Multistage builds</p>
+          <p>
+            Desarrollo de una aplicación web en Go con endpoints REST, manejo de errores,
+            healthcheck y servicio de contenido estático. Proyecto completamente contenedorizado
+            mediante Docker (multietapa), con pruebas automatizadas usando <code>curl</code> para
+            validar rutas GET/POST, 404 y métodos no permitidos.
+          </p>
+          <p>
+            <a class="btn" href="https://github.com/TheRubo12/Devops-Go-Docker-ASIR" 
+              target="_blank" rel="noopener noreferrer">
+              Ver en GitHub
+            </a>
+          </p>
+        </article>
+        <article class="card" data-category="academico">
+          <h3>CI/CD con Jenkins + Kubernetes (Alta Disponibilidad)</h3>
+          <p class="meta">Jenkins · Docker · Kubernetes · AWS EC2 · CI/CD</p>
+
+          <p>
+            Pipeline CI/CD profesional desplegado en Jenkins sobre AWS EC2, integrado con GitHub
+            mediante webhooks. Construcción automática de imágenes Docker, despliegue continuo a un
+            clúster Kubernetes en alta disponibilidad (3 réplicas), probes de salud y balanceo
+            real comprobado con bucles <code>curl</code>.
+          </p>
+
+          <p>
+            <a class="btn" href="https://github.com/TheRubo12/Devops-CICD-Kubernetes-ASIR" 
+              target="_blank" rel="noopener noreferrer">
+              Ver en GitHub
+            </a>
+          </p>
+        </article>
+        <article class="card" data-category="academico">
+          <h3>Diseño y Programación de Bases de Datos</h3>
+          <p class="meta">SQL avanzado · Optimización · Procedimientos · Triggers</p>
+
+          <p>
+            Proyecto completo de modelado y programación SQL sobre la base de datos TICKIT:
+            consultas avanzadas (JOINs, subconsultas, vistas), funciones UDF, roles de seguridad,
+            optimización mediante índices específicos, y diseño estructural con integridad
+            referencial, triggers y restricciones <code>CHECK</code>. Incluye procedimientos
+            almacenados y eventos automáticos para lógica de negocio real.
+          </p>
+
+          <p>
+            <a class="btn" href="https://github.com/TheRubo12/Tickit-DB-Design-FP046"
+              target="_blank" rel="noopener noreferrer">
+              Ver en GitHub
+            </a>
+          </p>
+        </article>
+
+        <article class="card" data-category="academico">
+          <h3>Diseño y Simulación de Redes – UOC</h3>
+          <p class="meta">Packet Tracer · VLAN · RIPv2 · ACLs · NAT/PAT · VPN · IPSec</p>
+          <p>
+            Proyecto completo de diseño físico y lógico de la red de un centro educativo, 
+            incluyendo CPD profesional, cableado estructurado, segmentación con VLANs 
+            y seguridad perimetral. Simulación avanzada en Packet Tracer con routers,
+            switches, DHCP, enrutamiento RIPv2, ACLs, NAT/PAT y servidor TFTP. 
+            Además, estudio de seguridad en redes con VPN, IPSec y cifrado.
+          </p>
+          <p>
+            <a class="btn" href="https://github.com/TheRubo12/Diseno-Simulacion-Redes-UOC" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </p>
+        </article>
+
+        <article class="card" data-category="academico">
+          <h3>Implantación del Sistema Operativo en una Empresa – Proyecto Implantix</h3>
+          <p class="meta">Windows Server · Active Directory · WSUS · Docker · OpenLDAP · Odoo · Ubuntu</p>
+          <p>
+            Proyecto completo de despliegue y administración del sistema operativo corporativo para Medicalia: 
+            resolución de incidencias críticas en Active Directory, restauración autoritativa y no autoritativa del 
+            dominio, implementación de WSUS y GPOs, despliegue de OpenLDAP en Docker con phpLDAPadmin, y puesta en 
+            marcha del ERP Odoo en Windows y Ubuntu con datos empresariales reales.
+          </p>
+          <p>
+            <a class="btn" href="https://github.com/TheRubo12/Implantacion-SO-Empresa-Implantix" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </p>
+        </article>
+
+        <article class="card" data-category="academico">
+          <h3>Implementación de Servicios de Red e Internet – ASIR</h3>
+          <p class="meta">Debian · VirtualBox · NAT · RAID · Rsync · OpenNMS · Docker · Icecast · WordPress</p>
+          <p>
+            Proyecto completo de diseño e implantación de servicios de red: laboratorio con servidores y clientes 
+            Debian en VirtualBox, enrutamiento y NAT con IPTables, sistema centralizado de copias de seguridad con 
+            Rsync (local y remoto), RAID1 software y cuotas, monitorización corporativa con OpenNMS, servidor de 
+            streaming (Docker + youtube-dl + Icecast) y despliegue de un CMS WordPress en hosting compartido.
+          </p>
+          <p>
+            <a class="btn" href="https://github.com/TheRubo12/NetServices-UOC-Implementaci-n-de-servicios-de-red-e-internet" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </p>
+        </article>
+
+        <article class="card" data-category="academico">
+          <h3>Laboratorio de Ciberseguridad – ASIR</h3>
+          <p class="meta">Kali · Metasploitable · Windows · Snort · VPN</p>
+          <p>
+            Laboratorio en VirtualBox con Kali, Metasploitable y Windows para practicar seguridad perimetral,
+            detección de intrusiones y comunicaciones seguras: reglas avanzadas IPTables, IDS Snort con reglas propias,
+            monitorización de integridad con Tripwire y túneles seguros con OpenVPN (certificados EasyRSA).
+          </p>
+          <p>
+            <a class="btn" href="https://github.com/TheRubo12/Laboratorio-Seguridad-ASIR/blob/main/docs/Producto1.pdf" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </p>
+        </article>
+
+        <article class="card" data-category="academico">
+          <h3>Comandos personalizados para el SO</h3>
+          <p class="meta">C (Visual Studio) · Windows CLI · automatización · XML/XSLT</p>
+          <p>Utilidades en C para automatizar administración en Windows: test/conmutación de DNS, 
+            parseo de ficheros, ejecución de comandos y generación de XML con XSLT.</p>
+          <p>
+            <a class="btn" href="https://github.com/TheRubo12/Programa-comandos-personalizados-para-sistema-operativo" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+   <!-- REPORTES / CTFs - Formato PRO -->
+<section id="reportes" aria-labelledby="reportes-title">
+  <h2 id="reportes-title">CTFs &amp; Informe (PDF)</h2>
+
+  <div class="grid cols-2">
+
+        <!-- Redacción insegura en PDF (vulnerabilidad real) -->
+    <article class="card ctf-pro" aria-labelledby="ctf-pdf-title" data-project data-tags="web,pdf,rgpd,responsible-disclosure">
+      <header class="ctf-header">
+        <span class="provider">Vulnerabilidad real · Responsible disclosure</span>
+        <span class="date">2025</span>
+      </header>
+
+      <h3 id="ctf-pdf-title">Redacción insegura en PDF — DNIs visibles en la capa de texto</h3>
+      <p class="summary">
+        Detección de un fallo de privacidad en un PDF de una administración pública: los DNIs estaban visualmente tapados,
+        pero seguían presentes en la capa interna del archivo y podían recuperarse fácilmente.
+      </p>
+
+      <div class="badges">
+        <span class="badge">Web</span>
+        <span class="badge">PDF</span>
+        <span class="badge">Protección de datos (RGPD)</span>
+        <span class="badge">Responsible disclosure</span>
+      </div>
+
+      <div class="steps-wrapper">
+        <ul class="steps">
+          <li>Identificación de que los DNIs aparecían “tachados” visualmente, pero seguían accesibles en la capa de texto del PDF.</li>
+          <li>Verificación controlada del fallo sin explotarlo ni descargar datos masivos, demostrando la posibilidad de recuperación.</li>
+          <li>Documentación del impacto (exposición de datos personales) y relación con el RGPD.</li>
+          <li>Notificación formal a la administración afectada, incluyendo recomendaciones técnicas de redacción segura de PDFs.</li>
+        </ul>
+
+        <button class="btn btn-ghost" type="button" data-steps-toggle>
+          Ver más
+        </button>
+      </div>
+
+      <footer class="ctf-footer">
+        <div class="tags">
+          <span class="tag">RGPD</span>
+          <span class="tag">PDF</span>
+          <span class="tag">Privacidad</span>
+          <span class="tag">Responsible disclosure</span>
+          <span class="tag">Reporting</span>
+        </div>
+        <div class="links">
+          <p class="meta">Informe no público por confidencialidad con la entidad.</p>
+          <!--
+          Si en el futuro haces un informe anonimizado, puedes activar esto:
+          <a class="btn" href="reportes/redaccion-segura-pdf.pdf" download>Descargar informe</a>
+          -->
+        </div>
+      </footer>
+    </article>
+
+    <!-- Ice -->
+    <article class="card ctf-pro open-pdf" aria-labelledby="ctf-ice-title" data-project data-tags="windows,icecast,cve">
+      <header class="ctf-header">
+        <span class="provider">TryHackMe</span>
+        <span class="date">06/2025</span>
+      </header>
+
+      <h3 id="ctf-ice-title">Ice — Icecast CVE-2004-1561</h3>
+      <p class="summary">Exploit de Icecast; post-explotación con migrate/kiwi/hashdump; habilitación de RDP.</p>
+
+      <div class="badges">
+        <span class="badge">Windows</span>
+        <span class="badge">8000/tcp Icecast</span>
+        <span class="badge">CVE-2004-1561</span>
+        <span class="badge">Post-Exploitation</span>
+      </div>
+
+      <div class="steps-wrapper">
+        <ul class="steps">
+          <li>Acceso inicial explotando la vulnerabilidad CVE-2004-1561 en Icecast.</li>
+          <li>Ejecución de código remoto mediante módulo de Metasploit.</li>
+          <li>Escalada de privilegios dentro de Windows utilizando técnicas de post-explotación / <code>kiwi</code> / <code>hashdump</code>.</li>
+          <li>Impacto simulado: compromiso total del sistema Windows con capacidad de robo de credenciales, habilitación de RDP y control completo de la máquina.</li>
+        </ul>
+
+        <button class="btn btn-ghost" type="button" data-steps-toggle>
+          Ver más
+        </button>
+      </div>
+
+      <footer class="ctf-footer">
+        <div class="tags">
+          <span class="tag">nmap</span><span class="tag">metasploit</span>
+          <span class="tag">kiwi</span><span class="tag">hashdump</span><span class="tag">RDP</span>
+        </div>
+        <div class="links">
+          <a class="btn" href="https://github.com/TheRubo12/ctf-tryhackme-ice" download>Informe</a>
+        </div>
+      </footer>
+    </article>
+
+    <!-- Blue -->
+    <article class="card ctf-pro" aria-labelledby="ctf-blue-title">
+      <header class="ctf-header">
+        <span class="provider">TryHackMe</span>
+        <span class="date">2025</span>
+      </header>
+      <h3 id="ctf-blue-title">Blue — MS17-010 (EternalBlue)</h3>
+      <p class="summary">Explotación SMB en Windows con MS17-010; obtención de shell y escalada.</p>
+      <div class="badges">
+        <span class="badge">Windows</span>
+        <span class="badge">445/tcp SMB</span>
+        <span class="badge">MS17-010</span>
+        <span class="badge">CVE-2017-0144</span>
+      </div>
+
+      <div class="steps-wrapper">
+        <ul class="steps">
+          <li>Acceso inicial al servicio SMB (445) afectado por MS17-010.</li>
+          <li>Explotación de la vulnerabilidad que otorga una shell remota en la máquina víctima.</li>
+          <li>Escalada de privilegios: explotación directa otorgó acceso como <code>NT AUTHORITY\SYSTEM</code>.</li>
+          <li>Impacto simulado: acceso remoto total al sistema con control absoluto sobre la máquina víctima.</li>
+        </ul>
+
+        <button class="btn btn-ghost" type="button" data-steps-toggle>
+          Ver más
+        </button>
+      </div>
+
+      <footer class="ctf-footer">
+        <div class="tags">
+          <span class="tag">nmap</span><span class="tag">metasploit</span><span class="tag">SMB</span>
+        </div>
+        <div class="links">
+          <a class="btn" href="https://github.com/TheRubo12/ctf-tryhackme-blue" download>Informe</a>
+        </div>
+      </footer>
+    </article>
+
+    <!-- Mr Robot -->
+    <article class="card ctf-pro" aria-labelledby="ctf-mrrobot-title">
+      <header class="ctf-header">
+        <span class="provider">TryHackMe</span>
+        <span class="date">2025</span>
+      </header>
+      <h3 id="ctf-mrrobot-title">Mr Robot — WordPress foothold</h3>
+      <p class="summary">Acceso por credenciales filtradas; escalada vía binario SUID nmap.</p>
+      <div class="badges">
+        <span class="badge">Linux</span>
+        <span class="badge">80/tcp Web</span>
+        <span class="badge">WordPress</span>
+      </div>
+
+      <div class="steps-wrapper">
+        <ul class="steps">
+          <li>Acceso inicial al CMS WordPress mediante credenciales obtenidas.</li>
+          <li>Ejecución de código remoto a través de la modificación de plantillas del tema.</li>
+          <li>Escalada de privilegios a través de un binario SUID <code>nmap</code> mal configurado.</li>
+          <li>Impacto simulado: acceso total al sistema, exfiltración de credenciales y capacidad de movimiento lateral.</li>
+        </ul>
+
+        <button class="btn btn-ghost" type="button" data-steps-toggle>
+          Ver más
+        </button>
+      </div>
+
+      <footer class="ctf-footer">
+        <div class="tags">
+          <span class="tag">nmap</span><span class="tag">gobuster</span><span class="tag">hydra</span><span class="tag">wpscan</span>
+        </div>
+        <div class="links">
+          <a class="btn" href="https://github.com/TheRubo12/ctf-tryhackme-mr-robot" download>Informe</a>
+        </div>
+      </footer>
+    </article>
+
+    <!-- Anonymous -->
+    <article class="card ctf-pro" aria-labelledby="ctf-anonymous-title">
+      <header class="ctf-header">
+        <span class="provider">TryHackMe</span>
+        <span class="date">2025</span>
+      </header>
+      <h3 id="ctf-anonymous-title">Anonymous — FTP &amp; cron privesc</h3>
+      <p class="summary">Acceso anónimo por FTP; escalada mediante cronjob vulnerable.</p>
+      <div class="badges">
+        <span class="badge">Linux</span>
+        <span class="badge">21/tcp FTP</span>
+        <span class="badge">Cron</span>
+      </div>
+
+      <div class="steps-wrapper">
+        <ul class="steps">
+          <li>Acceso inicial al servicio FTP (21) mediante login anónimo.</li>
+          <li>Ejecución remota de comandos al sobrescribir un script <code>clean.sh</code> ejecutado automáticamente en el sistema (cronjob).</li>
+          <li>Escalada de privilegios a root mediante un binario SUID (<code>/usr/bin/env</code>).</li>
+          <li>Impacto simulado: acceso total al sistema con permisos de administrador, posibilidad de modificar archivos, acceder a credenciales y controlar el servidor.</li>
+        </ul>
+
+        <button class="btn btn-ghost" type="button" data-steps-toggle>
+          Ver más
+        </button>
+      </div>
+
+      <footer class="ctf-footer">
+        <div class="tags">
+          <span class="tag">nmap</span><span class="tag">ftp</span><span class="tag">ReverseShell</span>
+        </div>
+        <div class="links">
+          <a class="btn" href="https://github.com/TheRubo12/ctf-tryhackme-anonymous" download>Informe</a>
+        </div>
+      </footer>
+    </article>
+
+    <!-- JaulaCon -->
+    <article class="card ctf-pro" aria-labelledby="ctf-jaulacon-title">
+      <header class="ctf-header">
+        <span class="provider">TheHackersLabs</span>
+        <span class="date">2025</span>
+      </header>
+      <h3 id="ctf-jaulacon-title">JaulaCon — ShellShock RCE</h3>
+      <p class="summary">RCE vía CGI vulnerable (ShellShock) y consolidación del acceso.</p>
+      <div class="badges">
+        <span class="badge">Linux</span>
+        <span class="badge">80/tcp CGI</span>
+        <span class="badge">CVE-2014-6271</span>
+      </div>
+
+      <div class="steps-wrapper">
+        <ul class="steps">
+          <li>Acceso inicial mediante inyección de comandos en la cabecera <code>User-Agent</code> (ShellShock).</li>
+          <li>Reverse shell establecida con éxito hacia la máquina del atacante.</li>
+          <li>Escalada a root no completada en este ejercicio, pero identificados binarios SUID potencialmente explotables.</li>
+          <li>Impacto simulado: ejecución remota de comandos en el servidor con posibilidad de comprometerlo totalmente.</li>
+        </ul>
+
+        <button class="btn btn-ghost" type="button" data-steps-toggle>
+          Ver más
+        </button>
+      </div>
+
+      <footer class="ctf-footer">
+        <div class="tags">
+          <span class="tag">nmap</span><span class="tag">Burp</span><span class="tag">gobuster</span>
+        </div>
+        <div class="links">
+          <a class="btn" href="https://github.com/TheRubo12/ctf-thehackerslabs-jaulacon" download>Informe</a>
+        </div>
+      </footer>
+    </article>
+
+    <!-- Vulnyx Basic -->
+    <article class="card ctf-pro" aria-labelledby="ctf-vulnyx-basic-title">
+      <header class="ctf-header">
+        <span class="provider">Vulnyx</span>
+        <span class="date">2025</span>
+      </header>
+      <h3 id="ctf-vulnyx-basic-title">Basic — SSH bruteforce &amp; SUID</h3>
+      <p class="summary">Acceso por fuerza bruta SSH y escalada con binario SUID mal configurado.</p>
+      <div class="badges">
+        <span class="badge">Linux</span>
+        <span class="badge">22/tcp SSH</span>
+        <span class="badge">Post-Exploitation</span>
+      </div>
+
+      <div class="steps-wrapper">
+        <ul class="steps">
+          <li>Acceso inicial al servicio SSH mediante un ataque de fuerza bruta sobre el usuario <code>dimitri</code>.</li>
+          <li>Escalada de privilegios a root explotando un binario con permisos SUID (<code>env</code>).</li>
+          <li>Impacto simulado: compromiso total del servidor Linux, con capacidad de ejecutar comandos como administrador y acceso a información sensible.</li>
+        </ul>
+
+        <button class="btn btn-ghost" type="button" data-steps-toggle>
+          Ver más
+        </button>
+      </div>
+
+      <footer class="ctf-footer">
+        <div class="tags">
+          <span class="tag">nmap</span><span class="tag">hydra</span><span class="tag">GTFOBins</span>
+        </div>
+        <div class="links">
+          <a class="btn" href="https://github.com/TheRubo12/ctf-vulnyx-basic" download>Informe</a>
+        </div>
+      </footer>
+    </article>
+
+  </div>
+</section>
+
+
+    <!-- EDUCACIÓN / CERTS -->
+    <section id="trayectoria" aria-labelledby="trayectoria-title">
+      <h2 id="trayectoria-title">Formación y logros</h2>
+      <ul class="timeline">
+        <li><div class="when">2025</div><strong>eJPTv2 (INE) — en progreso</strong><div class="meta">Pentesting: redes, web, post-explotación y reporting</div></li>
+        <li><div class="when">2025 · 08 Sep</div><strong>Cisco Networking Academy — Insignia: Carrera Profesional de Analista Junior en Ciberseguridad</strong><div class="meta">Evaluación de la ruta completa de ciberseguridad · badge obtenido</div></li>
+        <li><div class="when">2025</div><strong>Ciberseguridad Avanzada en Entornos TO (120h) — completado</strong><div class="meta">Segmentación/securización de dispositivos conectados y ciberejercicios</div></li>
+        <li><div class="when">2024</div><strong>Cisco — Introducción a la Ciberseguridad</strong><div class="meta">Fundamentos, amenazas y buenas prácticas</div></li>
+        <li><div class="when">Actual</div><strong>ASIR</strong><div class="meta">Administración de Sistemas Informáticos en Red</div></li>
+      </ul>
+    </section>
+
+            <!-- CONTACTO (CTA sin formulario) -->
+    <section id="contacto" aria-labelledby="contacto-title">
+      <h2 id="contacto-title">Contacto</h2>
+
+      <div class="contact contact--cta">
+        <!-- CTA principal -->
+        <div class="card cta-card" aria-labelledby="cta-title">
+          <h3 id="cta-title">¿Hablamos? 🚀</h3>
+          <p class="meta">
+            <strong>Disponibilidad inmediata</strong>.
+          </p>
+
+          <div class="cta-actions">
+            <a class="btn btn-lg focus-ring"
+              href="https://www.linkedin.com/in/rubovicente/"
+              target="_blank" rel="noopener noreferrer">Contactar por LinkedIn</a>
+            <button class="btn ghost focus-ring" type="button" onclick="copyEmail()">Copiar email</button>
+            <a class="btn ghost focus-ring" href="CV_Ruben_Vicente_Gilabert.pdf" download>Descargar CV</a>
+          </div>
+
+          <!-- Datos directos -->
+          <p class="meta tiny">
+            <strong>Email:</strong> <span id="email-value">rubovicente@gmail.com</span>
+            <span class="sr-only" id="copy-status" aria-live="polite"></span>
+          </p>
+
+          <!-- Señales para RRHH -->
+          <div class="cta-badges">
+            <span class="badge">ASIR</span>
+            <span class="badge">eJPTv2 en curso</span>
+            <span class="badge">Inglés C1 · Francés B1</span>
+          </div>
+        </div>
+
+        <!-- Valor para el reclutador -->
+        <div class="card">
+          <h3>Propuesta de valor</h3>
+          <ul>
+            <li><strong>Pentesting junior</strong> con práctica en <em>Kali, Nmap, Wireshark, Metasploit, Burp</em> y
+                scripting <strong>Python/Bash</strong> (PoC y automatización ligera).</li>
+            <li><strong>Reporting claro</strong> (evidencia, impacto, mitigación, CVSS) y foco en priorización.</li>
+          </ul>
+
+          <h3>Interés / encaje</h3>
+          <p class="meta">
+             Aporto base sólida de sistemas
+            Windows/Linux, redes y hardening, y <strong>aprendizaje rápido</strong> para crecer en tu equipo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  <footer class="container">
+    <span>© <span id="year"></span> Rubén Vicente Gilabert</span>
+    <span class="meta">Hecho con HTML/CSS. Sin trackers. <a href="CV_Ruben_Vicente_Gilabert.pdf">CV</a></span>
+  </footer>
+
+  <script defer src="js/main.js"></script>
+</body>
+</html>
