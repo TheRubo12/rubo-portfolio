@@ -192,6 +192,18 @@ footer{border-top:1px solid var(--bd);padding:22px 0;color:var(--muted);display:
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .focus-ring:focus-visible{outline:2px solid var(--acc-2);outline-offset:2px}
 
+/* NUEVO: asegurar que nada se sale horizontalmente */
+img, video{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:12px;top:12px;background:#000;color:#fff;padding:8px;border-radius:8px;width:auto;height:auto;z-index:1000}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.focus-ring:focus-visible{outline:2px solid var(--acc-2);outline-offset:2px}
+
 /* ===== Nuevo estilo de tarjetas CTF pro ===== */
 .ctf-pro{
   display:flex;
@@ -324,3 +336,4 @@ footer{border-top:1px solid var(--bd);padding:22px 0;color:var(--muted);display:
 .filter-btn.is-active{
   background:var(--accent, #0ea5e9); color:#fff; border-color:transparent;
 }
+
