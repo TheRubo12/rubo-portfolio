@@ -69,7 +69,7 @@
     <div class="container">
       <nav role="navigation" aria-label="Principal">
         <div class="left">
-          <div class="logo"><span class="dot" aria-hidden="true"></span><strong>Pentester Junior</strong></div>
+          <div class="logo"><span class="dot" aria-hidden="true"></span><strong></strong></div>
           <span class="badge">Disponible para prácticas/Empleo IT</span>
         </div>
 
@@ -103,11 +103,6 @@
         <h1 id="hero-title">Hola, soy <span style="color:var(--acc)">Rubén</span>. <br/>Administrador de sistems y pentester junior enfocado en <em>Web, AD y CTFs</em>.</h1>
         <p>Estudiante de <strong>ASIR</strong> y <strong>eJPTv2 (en progreso)</strong>. Me gusta romper cosas (con permiso) y escribir <strong>reportes claros</strong>. Practico en plataformas y laboratorios propios aplicando metodologías <abbr title="Open Web Application Security Project">OWASP</abbr> y PTES.</p>
         <p>Busco <strong>mi oportunidad en IT</strong> donde pueda aportar mis conocimientos en automatización, hardening y resolución de incidencias.</p>
-        <div class="taglist" aria-label="Tecnologías principales">
-          <span class="tag">Burp Suite</span><span class="tag">Nmap</span><span class="tag">Linux</span>
-          <span class="tag">Python/Bash</span><span class="tag">Active Directory</span>
-          <span class="tag">OWASP Top 10</span><span class="tag">APIs · Hardening</span>
-        </div>
         <div class="kpis" aria-label="Datos rápidos">
           <div class="kpi"><div class="meta">Formación</div><strong>ASIR</strong> <span class="meta">· eJPTv2 en curso</span></div>
           <div class="kpi"><div class="meta">Certs</div><strong>Cisco</strong> <span class="meta">Analista Junior</span></div>
@@ -116,6 +111,7 @@
         <div style="margin-top:16px">
           <a class="btn focus-ring" href="#contacto">Hablemos</a>
           <a class="btn ghost focus-ring" href="#reportes">Ver reportes</a>
+          <a class="btn ghost focus-ring" href="#proyectos">Ver proyectos</a>
         </div>
       </div>
       <div>
@@ -139,38 +135,80 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" aria-labelledby="skills-title">
-      <h2 id="skills-title">Habilidades clave</h2>
-      <div class="grid cols-3">
-        <article class="card">
-          <h3>Redes &amp; Sistemas (ASIR)</h3>
-          <p class="meta">TCP/IP, VLANs, DNS/DHCP, routing básico, firewalling. Admin y hardening básico en Linux/Windows.</p>
-        </article>
-        <article class="card">
-          <h3>Recon & Enumeración</h3>
-          <p class="meta">
-            OSINT · DNS · Nmap · NSE · huella de red
-          </p>
-        </article>
-        <article class="card">
-          <h3>Web Pentesting (eJPTv2)</h3>
-          <p class="meta">OWASP Top 10 (SQLi, XSS, IDOR, auth/session) · Burp Suite · pruebas de autorización.</p>
-        </article>
-        <article class="card">
-          <h3>AD &amp; Post-Explotación</h3>
-          <p class="meta">Conceptos de Kerberoasting, BloodHound y privesc básica en Windows/Linux.</p>
-        </article>
-        <article class="card">
-          <h3>Scripting &amp; Tooling</h3>
-          <p class="meta">Python · Bash · C/C++ (bases) · automatización de enumeración y PoC simples.</p>
-        </article>
-        <article class="card">
-          <h3>Metodología &amp; Reporting</h3>
-          <p class="meta">OWASP WSTG · PTES · CVSS · reportes claros (PoC + impacto + mitigación).</p>
-        </article>
-      </div>
-    </section>
+      <!-- SKILLS -->
+  <section id="skills" aria-labelledby="skills-title">
+    <h2 id="skills-title">Habilidades clave</h2>
+
+    <div class="grid cols-3">
+
+      <!-- 1) Redes & Sistemas -->
+      <article class="card">
+        <h3>Redes &amp; Sistemas (ASIR)</h3>
+        <p class="meta">TCP/IP · VLAN · VLSM · DNS/DHCP · Routing · NAT/PAT</p>
+        <p class="meta" style="margin-top:10px">
+          <strong>Lo demuestro con:</strong> diseño y simulación de redes (VLSM/VLAN/routing),
+          despliegue de servicios en Debian con NAT/iptables y conectividad multi-sede.
+        </p>
+      </article>
+
+      <!-- 2) Recon & Enumeración -->
+      <article class="card">
+        <h3>Recon &amp; Enumeración</h3>
+        <p class="meta">OSINT · DNS · Nmap · NSE · Fingerprinting</p>
+        <p class="meta" style="margin-top:10px">
+          <strong>Enfoque eJPTv2:</strong> host discovery, port scanning, service/OS detection
+          y enumeración guiada por resultados para preparar explotación.
+        </p>
+      </article>
+
+      <!-- 3) Pentesting Web (eJPTv2) -->
+      <article class="card">
+        <h3>Web Pentesting (eJPTv2)</h3>
+        <p class="meta">OWASP Top 10 · Auth/Session · IDOR · Burp Suite</p>
+        <p class="meta" style="margin-top:10px">
+          <strong>Lo demuestro con:</strong> CTFs documentados (PoC+impacto+mitigación) y
+          hallazgo real fallo de privacidad en PDF (redacción insegura) con notificación responsable.
+        </p>
+      </article>
+
+      <!-- 4) AD & Administración Windows -->
+      <article class="card">
+        <h3>Windows / AD &amp; Administración</h3>
+        <p class="meta">AD DS · OUs/Grupos · GPO · WSUS · PowerShell</p>
+        <p class="meta" style="margin-top:10px">
+          <strong>Lo demuestro con:</strong> despliegue y recuperación de AD, GPO/WSUS,
+          administración remota y automatización de tareas (usuarios, procesos, monitorización).
+        </p>
+      </article>
+
+      <!-- 5) DevOps & Contenedores -->
+      <article class="card">
+        <h3>DevOps &amp; Contenedores</h3>
+        <p class="meta">Docker · CI/CD · Jenkins · Kubernetes · AWS EC2</p>
+        <p class="meta" style="margin-top:10px">
+          <strong>Lo demuestro con:</strong> pipelines con Jenkins multibranch,
+          despliegues a Kubernetes con réplicas y probes, y apps contenedorizadas con multistage builds.
+        </p>
+      </article>
+
+      <!-- 6) Seguridad defensiva + Reporting -->
+      <article class="card">
+        <h3>Seguridad defensiva &amp; Reporting</h3>
+        <p class="meta">OpenVPN · Firewall · IDS · Integridad · CVSS</p>
+        <p class="meta" style="margin-top:10px">
+          <strong>Lo demuestro con:</strong> laboratorio de seguridad (VPN, reglas de perímetro,
+          detección de intrusiones e integridad) y reportes claros con evidencias y recomendaciones.
+        </p>
+      </article>
+
+    </div>
+
+    <!-- Mini “credenciales” opcional bajo las tarjetas -->
+    <p class="meta" style="margin-top:12px">
+      <strong>Certificación:</strong> Cisco Networking Academy — Junior Cybersecurity Analyst ·
+      <strong>Preparación:</strong> eJPTv2 (INE) en progreso.
+    </p>
+  </section>
 
     <!-- PROYECTOS (con filtros) -->
     <section id="proyectos" class="projects" aria-labelledby="proyectos-title">
@@ -263,6 +301,9 @@
             aplicar herramientas defensivas y técnicas de hacking ético, y generar documentación técnica y no técnica
             basada en evidencias y resultados.
           </p>
+          <!-- Botón "Ver más" (muestra skills + productos) -->
+          <details class="project-details">
+            <summary class="btn ghost">Ver más</summary>
 
           <!-- Skills demostradas -->
           <ul class="skills-list">
@@ -343,6 +384,9 @@
             automatización de tareas administrativas y despliegue de servicios críticos
             con políticas de mantenimiento y copias de seguridad.
           </p>
+          <!-- Botón "Ver más" (muestra skills + productos) -->
+          <details class="project-details">
+            <summary class="btn ghost">Ver más</summary>
 
           <!-- Skills demostradas -->
           <ul class="skills-list">
@@ -437,6 +481,9 @@
               diseño físico y lógico, segmentación de red, enrutamiento y fundamentos de
               ciberseguridad aplicados a la infraestructura diseñada.
             </p>
+            <!-- Botón "Ver más" (muestra skills + productos) -->
+          <details class="project-details">
+            <summary class="btn ghost">Ver más</summary>
 
             <!-- Skills demostradas -->
             <ul class="skills-list">
@@ -550,6 +597,9 @@
             resolución de incidencias críticas, recuperación del servicio y puesta en producción
             de servicios empresariales esenciales.
           </p>
+          <!-- Botón "Ver más" (muestra skills + productos) -->
+          <details class="project-details">
+            <summary class="btn ghost">Ver más</summary>
 
           <!-- Skills demostradas -->
           <ul class="skills-list">
@@ -616,6 +666,9 @@
             desplegando una infraestructura virtualizada con servicios accesibles desde LAN y, para web/FTP/streaming,
             también desde Internet. Incluye conectividad, backup tolerante a fallos, monitorización, streaming y CMS.
           </p>
+          <!-- Botón "Ver más" (muestra skills + productos) -->
+          <details class="project-details">
+            <summary class="btn ghost">Ver más</summary>
 
           <!-- Skills demostradas -->
           <ul class="skills-list">
@@ -725,6 +778,98 @@
               target="_blank" rel="noopener noreferrer">Repositorio GitHub</a>
           </p>
         </article>
+        <article class="card" data-category="academico">
+          <h3>FP.046 (P) — Diseño y Programación de una Base de Datos (TICKIT)</h3>
+          <p class="meta">
+            SQL · Integridad referencial · UDF · Roles · Índices · Optimización · Triggers · Procedimientos
+          </p>
+
+          <p>
+            Proyecto completo sobre la base de datos TICKIT: diseño estructural (claves, restricciones),
+            consultas avanzadas y vistas, lógica de negocio con UDF y control de permisos, optimización
+            con índices y automatización mediante triggers y procedimientos/eventos.
+          </p>
+
+          <!-- Botón "Ver más" (muestra skills + productos) -->
+          <details class="project-details">
+            <summary class="btn ghost">Ver más</summary>
+
+            <!-- Skills demostradas -->
+            <ul class="skills-list" style="margin-top:14px">
+              <li>Refuerzo de <strong>integridad referencial</strong> (FK, CHECK y consistencia de datos).</li>
+              <li><strong>SQL avanzado</strong>: JOINs, subconsultas, UNION y vistas para analítica.</li>
+              <li>Lógica de negocio con <strong>UDF</strong> (VIP, cortesías, etc.).</li>
+              <li>Diseño de <strong>roles y permisos</strong> para segmentación de acceso.</li>
+              <li><strong>Optimización</strong> mediante índices específicos y compuestos.</li>
+              <li><strong>Automatización</strong> con triggers, procedimientos almacenados y eventos programados.</li>
+              <li>Documentación y entregables por producto (scripts + PDF).</li>
+            </ul>
+
+            <!-- Productos (orden 1→5) -->
+            <div class="grid cols-1 nested-grid">
+              <article class="card nested-card">
+                <h4>Producto 1 · Estructura, claves e integridad</h4>
+                <p class="meta">FK · CHECK · Diseño estructural</p>
+                <p>Definición/refuerzo de estructura e integridad referencial (claves y restricciones).</p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/FP.046-P-Diseno-y-programacion-de-una-base-de-datos/blob/main/docs/FP.046_Producto1_RubenVicente.sql.pdf"
+                    target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 2 · Consultas SQL avanzadas y vistas</h4>
+                <p class="meta">JOINs · Subconsultas · UNION · Vistas</p>
+                <p>Consultas complejas y vistas para análisis (estadísticas, eventos, agregaciones).</p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/FP.046-P-Diseno-y-programacion-de-una-base-de-datos/blob/main/docs/FP.046_Producto2_RubenVicente.sql.pdf"
+                    target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 3 · UDF + lógica VIP</h4>
+                <p class="meta">Funciones · Reglas de negocio</p>
+                <p>Funciones definidas por el usuario (VIP, cortesías, utilidades) y lógica asociada.</p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/FP.046-P-Diseno-y-programacion-de-una-base-de-datos/blob/main/docs/FP.046_Producto3_RubenVicente.sql.pdf"
+                    target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 4 · Índices y optimización</h4>
+                <p class="meta">Índices · Rendimiento</p>
+                <p>Optimización de rendimiento con índices específicos/compuestos y ajustes de consultas.</p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/FP.046-P-Diseno-y-programacion-de-una-base-de-datos/blob/main/docs/FP.046_Producto4_RubenVicente.pdf"
+                    target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 5 · Triggers y procedimientos</h4>
+                <p class="meta">Triggers · Stored Procedures · Eventos</p>
+                <p>Automatización y validaciones: triggers, procedimientos almacenados y tareas programadas.</p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/FP.046-P-Diseno-y-programacion-de-una-base-de-datos/blob/main/docs/FP.046_Producto5_RubenVicente.sql.pdf"
+                    target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </p>
+              </article>
+            </div>
+
+            <p style="margin-top:10px">
+              <a class="btn"
+                href="https://github.com/TheRubo12/FP.046-P-Diseno-y-programacion-de-una-base-de-datos"
+                target="_blank" rel="noopener noreferrer">Repositorio GitHub</a>
+            </p>
+          </details>
+        </article>
 
         <article class="card" data-category="academico">
           <h3>FP.047 (P) — Programa comandos personalizados para sistema operativo</h3>
@@ -738,6 +883,9 @@
             de ficheros, ejecución y análisis de comandos del sistema, test de rendimiento de
             servidores DNS con conmutación automática y generación de XML para integración de aplicaciones.
           </p>
+          <!-- Botón "Ver más" (muestra skills + productos) -->
+          <details class="project-details">
+            <summary class="btn ghost">Ver más</summary>
 
           <!-- Skills demostradas -->
           <ul class="skills-list">
@@ -1221,6 +1369,7 @@
   <script defer src="js/main.js"></script>
 </body>
 </html>
+
 
 
   <script defer src="js/main.js"></script>
