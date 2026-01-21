@@ -99,7 +99,7 @@
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
       <div>
-        <div class="pill">Busco <strong>empleo</strong> Valencia/Castellón/Remoto</div>
+        <div class="pill">Busco <strong>practicas / empleo</strong> · Valencia/Castellón/Remoto</div>
         <h1 id="hero-title">Hola, soy <span style="color:var(--acc)">Rubén</span>. <br/>Administrador de sistems y pentester junior enfocado en <em>Web, AD y CTFs</em>.</h1>
         <p>Estudiante de <strong>ASIR</strong> y <strong>eJPTv2 (en progreso)</strong>. Me gusta romper cosas (con permiso) y escribir <strong>reportes claros</strong>. Practico en plataformas y laboratorios propios aplicando metodologías <abbr title="Open Web Application Security Project">OWASP</abbr> y PTES.</p>
         <p>Busco <strong>mi oportunidad en IT</strong> donde pueda aportar mis conocimientos en automatización, hardening y resolución de incidencias.</p>
@@ -123,9 +123,9 @@
           <h3 id="contacto-rapido">Datos de contacto</h3>
           <div style="margin:8px 0 10px">
             <div class="taglist">
-              <span class="tag">Valencia,Castellón ES</span>
+              <span class="tag">Valencia, ES</span>
               <span class="tag">Remoto</span>
-              <span class="tag">Empleo/Prácticas</span>
+              <span class="tag">Contrato / Prácticas</span>
             </div>
           </div>
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -150,7 +150,7 @@
         <article class="card">
           <h3>Recon & Enumeración</h3>
           <p class="meta">
-            OSINT · DNS · Nmap · NSE 
+            OSINT · DNS · Nmap · NSE · huella de red
           </p>
         </article>
         <article class="card">
@@ -187,7 +187,7 @@
       </div>
 
       <!-- Grid -->
-      <div id="projects-grid" class="grid cols-3" data-projects-grid>
+      <div id="projects-grid" class="grid cols-1" data-projects-grid>
         <!-- Personales -->
         <article class="card" data-category="personal">
           <h3>NautiDocs – Gestión Inteligente de Documentación Náutica</h3>
@@ -252,135 +252,589 @@
         </article>
 
         <!-- Académicos -->
-         <article class="card" data-category="academico">
-          <h3>DevOps &amp; Cloud – Go + Docker</h3>
-          <p class="meta">Go · Docker · REST API · Multistage builds</p>
-          <p>
-            Desarrollo de una aplicación web en Go con endpoints REST, manejo de errores,
-            healthcheck y servicio de contenido estático. Proyecto completamente contenedorizado
-            mediante Docker (multietapa), con pruebas automatizadas usando <code>curl</code> para
-            validar rutas GET/POST, 404 y métodos no permitidos.
+        <article class="card" data-category="academico">
+          <h3>FP.051 — Diseño e Implantación de Elementos de Seguridad Informática (Proyecto grupal)</h3>
+          <p class="meta">
+            VirtualBox · Kali · Metasploitable · VPN · Hardening · Pentesting · DoS · Reporting
           </p>
+
           <p>
-            <a class="btn" href="https://github.com/TheRubo12/Devops-Go-Docker-ASIR" 
+            Proyecto grupal (132h) orientado a montar y explotar una infraestructura virtualizada (laboratorio),
+            aplicar herramientas defensivas y técnicas de hacking ético, y generar documentación técnica y no técnica
+            basada en evidencias y resultados.
+          </p>
+
+          <!-- Skills demostradas -->
+          <ul class="skills-list">
+            <li>Diseño de laboratorio virtual y segmentación básica de red en entorno controlado.</li>
+            <li>Configuración de <strong>VPN</strong> para comunicaciones seguras y acceso remoto.</li>
+            <li>Aplicación de <strong>recon / recolección</strong> y análisis inicial de superficie de ataque.</li>
+            <li><strong>Análisis de vulnerabilidades</strong> y ejecución de pruebas de pentesting en laboratorio.</li>
+            <li>Comprensión y validación de escenarios de <strong>DoS</strong> en entorno autorizado.</li>
+            <li><strong>Reporting profesional</strong>: informe técnico + informe no técnico (enfoque ejecutivo).</li>
+            <li>Documentación estructurada por entregables y anexos de código.</li>
+          </ul>
+
+          <details class="project-details">
+            <summary class="btn ghost">Ver productos</summary>
+
+            <div class="grid cols-1 nested-grid">
+              <article class="card nested-card">
+                <h4>Producto 1 · Laboratorio + herramientas de seguridad + VPN</h4>
+                <p class="meta">VirtualBox · Laboratorio · Herramientas defensivas · VPN</p>
+                <p>
+                  Instalación y configuración del laboratorio virtual y puesta en marcha de herramientas
+                  de seguridad, incluyendo conectividad segura mediante VPN.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/FP051-dise-o-implantacion-seguridad-informatica/blob/main/producto-01-laboratorio-herramientas-vpn.pdf"
+                    target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 2 · Hacking ético (recolección, pentesting y DoS)</h4>
+                <p class="meta">Recon · Vulnerabilidades · Pentesting · DoS</p>
+                <p>
+                  Ejecución de actividades de hacking ético en entorno autorizado: recolección de datos,
+                  análisis de vulnerabilidades, pruebas de explotación y validación de impacto (DoS).
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/FP051-dise-o-implantacion-seguridad-informatica/blob/main/producto-02-hacking-etico-vulnerabilidades-pentesting-dos.pdf"
+                    target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 3 · Documentación final (técnica y no técnica)</h4>
+                <p class="meta">Informe técnico · Informe ejecutivo · Evidencias · Mitigación</p>
+                <p>
+                  Consolidación de resultados: documentación final con enfoque técnico y no técnico,
+                  basada en evidencias del laboratorio y recomendaciones de mitigación.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/FP051-dise-o-implantacion-seguridad-informatica/blob/main/producto-03-documentacion-final.pdf"
+                    target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </p>
+              </article>
+            </div>
+          </details>
+
+          <p style="margin-top:10px">
+            <a class="btn"
+              href="https://github.com/TheRubo12/FP051-dise-o-implantacion-seguridad-informatica"
+              target="_blank" rel="noopener noreferrer">Repositorio GitHub</a>
+          </p>
+        </article>
+
+
+        <article class="card" data-category="academico">
+          <h3>FP.048 — Administración de servidores empresariales (Proyecto grupal)</h3>
+          <p class="meta">
+            Windows Server · Active Directory · PowerShell · DNS/DHCP · SGBD · Backups
+          </p>
+
+          <p>
+            Proyecto orientado a la administración real de servidores empresariales:
+            diseño e implementación de un dominio Windows, gestión de recursos y usuarios,
+            automatización de tareas administrativas y despliegue de servicios críticos
+            con políticas de mantenimiento y copias de seguridad.
+          </p>
+
+          <!-- Skills demostradas -->
+          <ul class="skills-list">
+            <li>Administración de <strong>Active Directory</strong> (OUs, usuarios, grupos y permisos).</li>
+            <li>Gestión de servicios de infraestructura: <strong>DNS y DHCP</strong>.</li>
+            <li>Administración remota y operación diaria de servidores Windows.</li>
+            <li>Automatización de tareas con <strong>PowerShell</strong> (usuarios, procesos, monitorización).</li>
+            <li>Integración de recursos <strong>Windows / Linux</strong> en entorno corporativo.</li>
+            <li>Implantación de <strong>bases de datos</strong> con autenticación integrada.</li>
+            <li>Estrategias de <strong>backup y restauración</strong> orientadas a producción.</li>
+            <li>Documentación técnica clara y estructurada por productos.</li>
+          </ul>
+
+          <details class="project-details">
+            <summary class="btn ghost">Ver productos</summary>
+
+            <div class="grid cols-1 nested-grid">
+              <article class="card nested-card">
+                <h4>Producto 1 · Administración remota del servicio de directorio</h4>
+                <p class="meta">AD DS · DNS · DHCP · Acceso remoto</p>
+                <p>
+                  Implementación del dominio y servicios base, diseño del directorio
+                  y administración remota segura del entorno.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/FP.048-P-Administracion-de-servidores-empresariales/blob/main/docs/informes/producto-01-administracion-remota-servicio-directorio.pdf"
+                    target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 2 · Servicios y recursos de red</h4>
+                <p class="meta">OUs · Permisos · Recursos compartidos</p>
+                <p>
+                  Organización del dominio, gestión de usuarios y grupos,
+                  asignación de permisos y administración de recursos de red.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/FP.048-P-Administracion-de-servidores-empresariales/blob/main/docs/informes/producto-02-servicios-recursos-red.pdf"
+                    target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 3 · Automatización de tareas y procesos</h4>
+                <p class="meta">PowerShell · Automatización · Monitorización</p>
+                <p>
+                  Desarrollo de scripts PowerShell para gestión de usuarios,
+                  control de procesos, monitorización básica y tareas programadas.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/FP.048-P-Administracion-de-servidores-empresariales/blob/main/docs/informes/producto-03-automatizacion-tareas-procesos.pdf"
+                    target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 4 · Implantación de base de datos</h4>
+                <p class="meta">SGBD · Autenticación · Backups</p>
+                <p>
+                  Despliegue de un SGBD con autenticación integrada en el dominio,
+                  políticas de backup/restauración y acceso de demostración vía web.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/FP.048-P-Administracion-de-servidores-empresariales/blob/main/docs/informes/producto-04-implantacion-base-datos.pdf"
+                    target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </p>
+              </article>
+            </div>
+          </details>
+
+          <p style="margin-top:10px">
+            <a class="btn"
+              href="https://github.com/TheRubo12/FP.048-P-Administracion-de-servidores-empresariales"
+              target="_blank" rel="noopener noreferrer">Repositorio GitHub</a>
+          </p>
+        </article>
+
+        <article class="card" data-category="academico">
+            <h3>FP.049 (P) — Diseño y Simulación de Redes</h3>
+            <p class="meta">
+              Cisco Packet Tracer · Diseño de red · VLSM · Routing · VLAN · Seguridad
+            </p>
+
+            <p>
+              Proyecto individual (132h) orientado al diseño y simulación de una red telemática
+              para la interconexión de tres centros educativos. Incluye planificación IP,
+              diseño físico y lógico, segmentación de red, enrutamiento y fundamentos de
+              ciberseguridad aplicados a la infraestructura diseñada.
+            </p>
+
+            <!-- Skills demostradas -->
+            <ul class="skills-list">
+              <li>Diseño de <strong>arquitecturas de red LAN</strong> para entornos educativos.</li>
+              <li>Planificación de direccionamiento <strong>IP y VLSM</strong>.</li>
+              <li>Segmentación mediante <strong>VLANs</strong> y redes WiFi.</li>
+              <li>Configuración de <strong>enrutamiento</strong> y protocolos de red.</li>
+              <li>Diseño de <strong>CPD</strong> y cableado estructurado.</li>
+              <li>Aplicación de criterios de <strong>seguridad y ciberseguridad</strong> en redes.</li>
+              <li>Simulación completa y validación funcional en <strong>Cisco Packet Tracer</strong>.</li>
+              <li>Documentación técnica estructurada por productos.</li>
+            </ul>
+
+            <details class="project-details">
+              <summary class="btn ghost">Ver productos</summary>
+
+              <div class="grid cols-1 nested-grid">
+
+                <!-- Producto 1 -->
+                <article class="card nested-card">
+                  <h4>Producto 1 · Diseño de redes locales y normativa medioambiental</h4>
+                  <p class="meta">CPD · Cableado · VLAN · WiFi · Normativa</p>
+                  <p>
+                    Diseño físico y lógico del centro educativo: CPD, cableado estructurado,
+                    segmentación por VLANs, red WiFi separada y aplicación de criterios
+                    medioambientales y de seguridad.
+                  </p>
+                  <p>
+                    <a class="btn"
+                      href="https://github.com/TheRubo12/Diseno-Simulacion-Redes-UOC/tree/main/producto1-diseno-red-local"
+                      target="_blank" rel="noopener noreferrer">
+                      Ver informe
+                    </a>
+                  </p>
+                </article>
+
+                <!-- Producto 2 -->
+                <article class="card nested-card">
+                  <h4>Producto 2 · Subdivisión de redes, VLSM y enrutamiento</h4>
+                  <p class="meta">Subnetting · VLSM · Routing</p>
+                  <p>
+                    Diseño del direccionamiento IP mediante VLSM, subdivisión eficiente
+                    de redes y selección/configuración de protocolos de enrutamiento
+                    acordes a la topología planteada.
+                  </p>
+                  <p>
+                    <span class="btn disabled" aria-disabled="true">
+                      Informe integrado en el proyecto
+                    </span>
+                  </p>
+                </article>
+
+                <!-- Producto 3 -->
+                <article class="card nested-card">
+                  <h4>Producto 3 · Diseño lógico e interconexión de LANs</h4>
+                  <p class="meta">Routers · Switches · VLAN · DHCP · NAT · ACL · TFTP</p>
+                  <p>
+                    Implementación en Cisco Packet Tracer de la red del aula:
+                    routers y switches de planta, VLANs, DHCP, enrutamiento,
+                    NAT/PAT, ACLs y servidor TFTP.
+                  </p>
+                  <p>
+                    <a class="btn"
+                      href="https://github.com/TheRubo12/Diseno-Simulacion-Redes-UOC/tree/main/producto3-diseno-logico-interconexion-lans"
+                      target="_blank" rel="noopener noreferrer">
+                      Ver informe
+                    </a>
+                  </p>
+                </article>
+
+                <!-- Producto 4 -->
+                <article class="card nested-card">
+                  <h4>Producto 4 · Seguridad de redes y correo seguro</h4>
+                  <p class="meta">Ciberseguridad · VPN · IPSec · Cifrado · Certificados</p>
+                  <p>
+                    Marco teórico y aplicado de ciberseguridad: VPN, IPSec,
+                    técnicas de cifrado y uso de certificados digitales
+                    adaptados al contexto de la red diseñada.
+                  </p>
+                  <p>
+                    <a class="btn"
+                      href="https://github.com/TheRubo12/Diseno-Simulacion-Redes-UOC/tree/main/producto4-seguridad-vpn-ipsec"
+                      target="_blank" rel="noopener noreferrer">
+                      Ver informe
+                    </a>
+                  </p>
+                </article>
+
+              </div>
+            </details>
+
+            <p style="margin-top:10px">
+              <a class="btn"
+                href="https://github.com/TheRubo12/Diseno-Simulacion-Redes-UOC"
+                target="_blank" rel="noopener noreferrer">
+                Repositorio GitHub
+              </a>
+            </p>
+          </article>
+
+
+        <article class="card" data-category="academico">
+          <h3>FP045 (P) — Implantación del sistema operativo de una empresa (Proyecto Implantix)</h3>
+          <p class="meta">
+            Windows Server · Active Directory · WSUS · Docker · OpenLDAP · Odoo · Linux
+          </p>
+
+          <p>
+            Proyecto práctico centrado en la implantación completa del sistema operativo corporativo
+            de una empresa ficticia (Medicalia). Incluye despliegue inicial del dominio,
+            resolución de incidencias críticas, recuperación del servicio y puesta en producción
+            de servicios empresariales esenciales.
+          </p>
+
+          <!-- Skills demostradas -->
+          <ul class="skills-list">
+            <li>Implantación de un entorno <strong>Windows Server</strong> desde cero.</li>
+            <li>Despliegue y recuperación de <strong>Active Directory</strong> ante fallos críticos.</li>
+            <li>Restauraciones <strong>autoritativas y no autoritativas</strong> del dominio.</li>
+            <li>Gestión de <strong>GPOs</strong> y políticas corporativas.</li>
+            <li>Implantación y administración de <strong>WSUS</strong> para control de actualizaciones.</li>
+            <li>Despliegue de <strong>OpenLDAP</strong> en contenedores Docker.</li>
+            <li>Implantación de <strong>ERP Odoo</strong> en Windows y Linux.</li>
+            <li>Aplicación de criterios de <strong>continuidad de negocio</strong> y recuperación.</li>
+            <li>Documentación técnica estructurada orientada a entornos reales.</li>
+          </ul>
+
+          <details class="project-details">
+            <summary class="btn ghost">Ver productos</summary>
+
+            <div class="grid cols-1 nested-grid">
+              <article class="card nested-card">
+                <h4>Fase 1 · Implantación del dominio corporativo</h4>
+                <p class="meta">Windows Server · AD DS · DNS · GPO</p>
+                <p>
+                  Instalación del servidor, promoción a controlador de dominio,
+                  configuración de DNS y aplicación de políticas iniciales de empresa.
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Fase 2 · Resolución de incidencias y recuperación</h4>
+                <p class="meta">AD Recovery · Backups · Continuidad</p>
+                <p>
+                  Diagnóstico y resolución de incidencias críticas en Active Directory,
+                  restauraciones autoritativas y no autoritativas y validación del servicio.
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Fase 3 · Servicios empresariales</h4>
+                <p class="meta">WSUS · OpenLDAP · Docker · Odoo</p>
+                <p>
+                  Implantación de servicios clave: control de actualizaciones con WSUS,
+                  directorio OpenLDAP en Docker y despliegue del ERP Odoo en Windows/Linux.
+                </p>
+              </article>
+            </div>
+          </details>
+
+          <p style="margin-top:10px">
+            <a class="btn"
+              href="https://github.com/TheRubo12/Implantacion-SO-Empresa-Implantix"
+              target="_blank" rel="noopener noreferrer">Repositorio GitHub</a>
+          </p>
+        </article>
+
+
+        <article class="card" data-category="academico">
+          <h3>FP.052 (P) — Implantación de servicios de red en Internet (NetServices)</h3>
+          <p class="meta">
+            Debian · VirtualBox · HTTP/FTP · NAT (iptables) · Rsync/SSH · RAID/Quotas · OpenNMS · Docker · WordPress
+          </p>
+
+          <p>
+            Proyecto grupal (132h) para migrar servicios desde un entorno Windows Server a un ecosistema libre (Debian),
+            desplegando una infraestructura virtualizada con servicios accesibles desde LAN y, para web/FTP/streaming,
+            también desde Internet. Incluye conectividad, backup tolerante a fallos, monitorización, streaming y CMS.
+          </p>
+
+          <!-- Skills demostradas -->
+          <ul class="skills-list">
+            <li>Virtualización de infraestructura en <strong>VirtualBox</strong> (red interna, NAT, bridge) y clientes distribuidos por sedes.</li>
+            <li>Configuración de <strong>enrutamiento y NAT</strong> con <code>iptables</code> para exponer servicios a Internet.</li>
+            <li>Implantación de servicios <strong>HTTP/FTP</strong> en Debian.</li>
+            <li>Backups centralizados con <strong>rsync</strong> (local y remoto vía <strong>SSH</strong>), con enfoque a tolerancia a fallos.</li>
+            <li>Almacenamiento: <strong>RAID1 software</strong> (<code>mdadm</code>) y <strong>cuotas</strong> de disco.</li>
+            <li>Monitorización con <strong>OpenNMS</strong>, alertas por correo (<strong>Postfix</strong>) y notificaciones a <strong>Telegram</strong>.</li>
+            <li>Streaming de audio/vídeo con <strong>Docker</strong> + <strong>Icecast</strong> + VLC.</li>
+            <li>Despliegue de <strong>CMS WordPress</strong> en hosting compartido con configuración y plugins.</li>
+            <li>Documentación técnica estructurada por productos con scripts y evidencias.</li>
+          </ul>
+
+          <details class="project-details">
+            <summary class="btn ghost">Ver productos</summary>
+
+            <div class="grid cols-1 nested-grid">
+              <article class="card nested-card">
+                <h4>Producto 1 · Servidor, clientes y conectividad</h4>
+                <p class="meta">Debian · VirtualBox · LAN/Internet · NAT/Forwarding</p>
+                <p>
+                  Laboratorio con servidor Debian (doble interfaz) y clientes. Conectividad entre sedes simuladas
+                  y exposición de servicios mediante NAT/forwarding con <code>iptables</code>.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/NetServices-UOC-Implementaci-n-de-servicios-de-red-e-internet/tree/main/producto1-servidor-clientes-conectividad"
+                    target="_blank" rel="noopener noreferrer">Ver producto</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 2 · Backups + RAID1 + cuotas</h4>
+                <p class="meta">Rsync · SSH · mdadm · quota</p>
+                <p>
+                  Sistema de copias de seguridad local y remoto con rsync, centralización en servidor,
+                  RAID1 software para <code>/home</code> y cuotas por usuario/grupo.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/NetServices-UOC-Implementaci-n-de-servicios-de-red-e-internet/tree/main/producto2-backup-raid-cuotas"
+                    target="_blank" rel="noopener noreferrer">Ver producto</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 3 · Monitorización (OpenNMS) + alertas</h4>
+                <p class="meta">OpenNMS · PostgreSQL · Postfix · Telegram Bot</p>
+                <p>
+                  Implantación de OpenNMS para descubrimiento de nodos y monitorización de servicios,
+                  con alertas por correo y notificaciones automáticas a Telegram.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/NetServices-UOC-Implementaci-n-de-servicios-de-red-e-internet/tree/main/producto3-monitorizacion-opennms"
+                    target="_blank" rel="noopener noreferrer">Ver producto</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 4 · Documentación asociada</h4>
+                <p class="meta">Informe PDF · Evidencias · Configuración</p>
+                <p>
+                  Entregable de documentación asociado al producto (detalles y evidencias en la carpeta de docs).
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/NetServices-UOC-Implementaci-n-de-servicios-de-red-e-internet/tree/main/producto4"
+                    target="_blank" rel="noopener noreferrer">Ver producto</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 5 · Streaming (Docker + Icecast)</h4>
+                <p class="meta">Docker · yt-dlp/youtube-dl · Icecast2 · VLC</p>
+                <p>
+                  Sistema de streaming de audio/vídeo usando Docker (descarga de medios), Icecast como servidor
+                  y VLC como fuente de emisión.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/NetServices-UOC-Implementaci-n-de-servicios-de-red-e-internet/tree/main/producto5-streaming-docker-icecast"
+                    target="_blank" rel="noopener noreferrer">Ver producto</a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 6 · CMS (WordPress)</h4>
+                <p class="meta">WordPress · Hosting compartido · Configuración · Plugins</p>
+                <p>
+                  Instalación y configuración de WordPress en hosting compartido, con áreas públicas/privadas,
+                  gestión de usuarios y contenido multimedia (vídeo y PDFs).
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/NetServices-UOC-Implementaci-n-de-servicios-de-red-e-internet/tree/main/producto6-cms-wordpress"
+                    target="_blank" rel="noopener noreferrer">Ver producto</a>
+                </p>
+              </article>
+            </div>
+          </details>
+
+          <p style="margin-top:10px">
+            <a class="btn"
+              href="https://github.com/TheRubo12/NetServices-UOC-Implementaci-n-de-servicios-de-red-e-internet"
+              target="_blank" rel="noopener noreferrer">Repositorio GitHub</a>
+          </p>
+        </article>
+
+        <article class="card" data-category="academico">
+          <h3>FP.047 (P) — Programa comandos personalizados para sistema operativo</h3>
+          <p class="meta">
+            C · Windows CLI · Automatización · DNS · Ficheros · XML · XSLT · Testing
+          </p>
+
+          <p>
+            Proyecto individual (120h) centrado en la automatización de tareas de administración
+            del sistema operativo Windows mediante programación en C. Incluye acceso al sistema
+            de ficheros, ejecución y análisis de comandos del sistema, test de rendimiento de
+            servidores DNS con conmutación automática y generación de XML para integración de aplicaciones.
+          </p>
+
+          <!-- Skills demostradas -->
+          <ul class="skills-list">
+            <li>Programación estructurada y modular en <strong>C</strong>.</li>
+            <li>Acceso, lectura y escritura de <strong>archivos de texto</strong>.</li>
+            <li>Automatización de tareas de administración en <strong>Windows</strong>.</li>
+            <li>Uso de <strong>redirecciones de salida</strong> de comandos (<code>&gt;</code>).</li>
+            <li>Análisis de rendimiento y selección automática de <strong>servidores DNS</strong>.</li>
+            <li>Modificación dinámica de la configuración de red del sistema.</li>
+            <li>Generación de <strong>XML</strong> para integración de aplicaciones.</li>
+            <li>Conceptos de <strong>XSLT</strong> y presentación de datos.</li>
+            <li>Diseño de pruebas y documentación técnica del código.</li>
+          </ul>
+
+          <details class="project-details">
+            <summary class="btn ghost">Ver productos</summary>
+
+            <div class="grid cols-1 nested-grid">
+
+              <article class="card nested-card">
+                <h4>Producto 1 · Acceso al sistema de ficheros</h4>
+                <p class="meta">C · I/O · Persistencia</p>
+                <p>
+                  Introducción al acceso y manipulación de archivos de texto en C,
+                  sentando las bases de persistencia necesarias para los productos posteriores.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/Programa-comandos-personalizados-para-sistema-operativo/blob/main/Producto1/producto1(FP047)_VicenteGilabert_Ruben.pdf"
+                    target="_blank" rel="noopener noreferrer">
+                    Ver informe (PDF)
+                  </a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 2 · Comandos de administración y redirecciones</h4>
+                <p class="meta">Windows CLI · Redirección · Análisis</p>
+                <p>
+                  Ejecución de comandos de administración del sistema operativo Windows,
+                  redireccionando su salida a archivos de texto para su posterior análisis automático.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/Programa-comandos-personalizados-para-sistema-operativo/blob/main/Producto2/producto2(FP047)_VicenteGilabert_Ruben.pdf"
+                    target="_blank" rel="noopener noreferrer">
+                    Ver informe (PDF)
+                  </a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 3 · Test de velocidad DNS y conmutación automática</h4>
+                <p class="meta">DNS · Networking · Automatización</p>
+                <p>
+                  Desarrollo de una aplicación en C capaz de medir la latencia de distintos
+                  servidores DNS (incluido el configurado en el sistema) y sustituirlo
+                  automáticamente por el más rápido cuando sea necesario.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/Programa-comandos-personalizados-para-sistema-operativo/blob/main/Producto3/producto3(FP047)_VicenteGilabert_Ruben.pdf"
+                    target="_blank" rel="noopener noreferrer">
+                    Ver informe (PDF)
+                  </a>
+                </p>
+              </article>
+
+              <article class="card nested-card">
+                <h4>Producto 4 · Generación de XML e integración de aplicaciones</h4>
+                <p class="meta">XML · XSLT · Integración</p>
+                <p>
+                  Aplicación final en C capaz de generar archivos XML a partir de información
+                  obtenida mediante comandos del sistema, introduciendo conceptos de
+                  integración de aplicaciones y tecnologías asociadas como XSLT.
+                </p>
+                <p>
+                  <a class="btn"
+                    href="https://github.com/TheRubo12/Programa-comandos-personalizados-para-sistema-operativo/blob/main/Producto4/producto4(FP047)_VicenteGilabert_Ruben.pdf"
+                    target="_blank" rel="noopener noreferrer">
+                    Ver informe (PDF)
+                  </a>
+                </p>
+              </article>
+
+            </div>
+          </details>
+
+          <p style="margin-top:10px">
+            <a class="btn"
+              href="https://github.com/TheRubo12/Programa-comandos-personalizados-para-sistema-operativo"
               target="_blank" rel="noopener noreferrer">
-              Ver en GitHub
+              Repositorio GitHub
             </a>
           </p>
         </article>
-        <article class="card" data-category="academico">
-          <h3>CI/CD con Jenkins + Kubernetes (Alta Disponibilidad)</h3>
-          <p class="meta">Jenkins · Docker · Kubernetes · AWS EC2 · CI/CD</p>
-
-          <p>
-            Pipeline CI/CD profesional desplegado en Jenkins sobre AWS EC2, integrado con GitHub
-            mediante webhooks. Construcción automática de imágenes Docker, despliegue continuo a un
-            clúster Kubernetes en alta disponibilidad (3 réplicas), probes de salud y balanceo
-            real comprobado con bucles <code>curl</code>.
-          </p>
-
-          <p>
-            <a class="btn" href="https://github.com/TheRubo12/Devops-CICD-Kubernetes-ASIR" 
-              target="_blank" rel="noopener noreferrer">
-              Ver en GitHub
-            </a>
-          </p>
-        </article>
-        <article class="card" data-category="academico">
-          <h3>Diseño y Programación de Bases de Datos</h3>
-          <p class="meta">SQL avanzado · Optimización · Procedimientos · Triggers</p>
-
-          <p>
-            Proyecto completo de modelado y programación SQL sobre la base de datos TICKIT:
-            consultas avanzadas (JOINs, subconsultas, vistas), funciones UDF, roles de seguridad,
-            optimización mediante índices específicos, y diseño estructural con integridad
-            referencial, triggers y restricciones <code>CHECK</code>. Incluye procedimientos
-            almacenados y eventos automáticos para lógica de negocio real.
-          </p>
-
-          <p>
-            <a class="btn" href="https://github.com/TheRubo12/Tickit-DB-Design-FP046"
-              target="_blank" rel="noopener noreferrer">
-              Ver en GitHub
-            </a>
-          </p>
-        </article>
-
-        <article class="card" data-category="academico">
-          <h3>Diseño y Simulación de Redes – UOC</h3>
-          <p class="meta">Packet Tracer · VLAN · RIPv2 · ACLs · NAT/PAT · VPN · IPSec</p>
-          <p>
-            Proyecto completo de diseño físico y lógico de la red de un centro educativo, 
-            incluyendo CPD profesional, cableado estructurado, segmentación con VLANs 
-            y seguridad perimetral. Simulación avanzada en Packet Tracer con routers,
-            switches, DHCP, enrutamiento RIPv2, ACLs, NAT/PAT y servidor TFTP. 
-            Además, estudio de seguridad en redes con VPN, IPSec y cifrado.
-          </p>
-          <p>
-            <a class="btn" href="https://github.com/TheRubo12/Diseno-Simulacion-Redes-UOC" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          </p>
-        </article>
-
-        <article class="card" data-category="academico">
-          <h3>Implantación del Sistema Operativo en una Empresa – Proyecto Implantix</h3>
-          <p class="meta">Windows Server · Active Directory · WSUS · Docker · OpenLDAP · Odoo · Ubuntu</p>
-          <p>
-            Proyecto completo de despliegue y administración del sistema operativo corporativo para Medicalia: 
-            resolución de incidencias críticas en Active Directory, restauración autoritativa y no autoritativa del 
-            dominio, implementación de WSUS y GPOs, despliegue de OpenLDAP en Docker con phpLDAPadmin, y puesta en 
-            marcha del ERP Odoo en Windows y Ubuntu con datos empresariales reales.
-          </p>
-          <p>
-            <a class="btn" href="https://github.com/TheRubo12/Implantacion-SO-Empresa-Implantix" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          </p>
-        </article>
-
-        <article class="card" data-category="academico">
-          <h3>Implementación de Servicios de Red e Internet – ASIR</h3>
-          <p class="meta">Debian · VirtualBox · NAT · RAID · Rsync · OpenNMS · Docker · Icecast · WordPress</p>
-          <p>
-            Proyecto completo de diseño e implantación de servicios de red: laboratorio con servidores y clientes 
-            Debian en VirtualBox, enrutamiento y NAT con IPTables, sistema centralizado de copias de seguridad con 
-            Rsync (local y remoto), RAID1 software y cuotas, monitorización corporativa con OpenNMS, servidor de 
-            streaming (Docker + youtube-dl + Icecast) y despliegue de un CMS WordPress en hosting compartido.
-          </p>
-          <p>
-            <a class="btn" href="https://github.com/TheRubo12/NetServices-UOC-Implementaci-n-de-servicios-de-red-e-internet" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          </p>
-        </article>
-
-        <article class="card" data-category="academico">
-          <h3>Laboratorio de Ciberseguridad – ASIR</h3>
-          <p class="meta">Kali · Metasploitable · Windows · Snort · VPN</p>
-          <p>
-            Laboratorio en VirtualBox con Kali, Metasploitable y Windows para practicar seguridad perimetral,
-            detección de intrusiones y comunicaciones seguras: reglas avanzadas IPTables, IDS Snort con reglas propias,
-            monitorización de integridad con Tripwire y túneles seguros con OpenVPN (certificados EasyRSA).
-          </p>
-          <p>
-            <a class="btn" href="https://github.com/TheRubo12/Laboratorio-Seguridad-ASIR/blob/main/docs/Producto1.pdf" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          </p>
-        </article>
-
-        <article class="card" data-category="academico">
-          <h3>Comandos personalizados para el SO</h3>
-          <p class="meta">C (Visual Studio) · Windows CLI · automatización · XML/XSLT</p>
-          <p>Utilidades en C para automatizar administración en Windows: test/conmutación de DNS, 
-            parseo de ficheros, ejecución de comandos y generación de XML con XSLT.</p>
-          <p>
-            <a class="btn" href="https://github.com/TheRubo12/Programa-comandos-personalizados-para-sistema-operativo" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          </p>
-        </article>
+        
       </div>
     </section>
 
@@ -683,62 +1137,91 @@
       </ul>
     </section>
 
-            <!-- CONTACTO (CTA sin formulario) -->
-    <section id="contacto" aria-labelledby="contacto-title">
-      <h2 id="contacto-title">Contacto</h2>
+<!-- CONTACTO (CTA sin formulario) -->
+<section id="contacto" aria-labelledby="contacto-title">
+  <h2 id="contacto-title">Contacto</h2>
 
-      <div class="contact contact--cta">
-        <!-- CTA principal -->
-        <div class="card cta-card" aria-labelledby="cta-title">
-          <h3 id="cta-title">¿Hablamos? 🚀</h3>
-          <p class="meta">
-            <strong>Disponibilidad inmediata</strong>.
-          </p>
+  <div class="contact contact--cta contact--v2">
 
-          <div class="cta-actions">
-            <a class="btn btn-lg focus-ring"
-              href="https://www.linkedin.com/in/rubovicente/"
-              target="_blank" rel="noopener noreferrer">Contactar por LinkedIn</a>
-            <button class="btn ghost focus-ring" type="button" onclick="copyEmail()">Copiar email</button>
-            <a class="btn ghost focus-ring" href="CV_Ruben_Vicente_Gilabert.pdf" download>Descargar CV</a>
-          </div>
+    <!-- Propuesta de valor (columna principal) -->
+    <div class="card contact-main">
+      <h3>Propuesta de valor</h3>
+      <ul>
+        <li>
+          <strong>Perfil técnico transversal</strong> con base sólida en
+          <em>sistemas, redes y ciberseguridad</em>, capaz de entender y analizar
+          infraestructuras completas.
+        </li>
+        <li>
+          <strong>Pentesting junior</strong> con experiencia práctica en
+          <em>reconocimiento, enumeración, explotación y post-explotación</em>
+          usando Kali, Nmap, Burp, Metasploit y scripting en <strong>Python/Bash</strong>.
+        </li>
+        <li>
+          <strong>Enfoque profesional en reporting</strong>: informes claros con
+          evidencia, impacto real, priorización, mitigación y referencia a CVSS/RGPD.
+        </li>
+        <li>
+          Experiencia en <strong>laboratorios propios y proyectos reales</strong>:
+          sistemas, redes, seguridad, DevOps y automatización.
+        </li>
+      </ul>
 
-          <!-- Datos directos -->
-          <p class="meta tiny">
-            <strong>Email:</strong> <span id="email-value">rubovicente@gmail.com</span>
-            <span class="sr-only" id="copy-status" aria-live="polite"></span>
-          </p>
+      <h3>Interés / encaje en equipo</h3>
+      <p class="meta">
+        Aporto una <strong>base sólida en Windows y Linux</strong>, redes y hardening,
+        con mentalidad analítica, buenas prácticas y <strong>aprendizaje rápido</strong>.
+        Busco crecer dentro de un equipo técnico y evolucionar hacia roles de
+        <em>seguridad, sistemas o DevSecOps</em>.
+      </p>
+    </div>
 
-          <!-- Señales para RRHH -->
-          <div class="cta-badges">
-            <span class="badge">ASIR</span>
-            <span class="badge">eJPTv2 en curso</span>
-            <span class="badge">Inglés C1 · Francés B1</span>
-          </div>
-        </div>
+    <!-- CTA compacto -->
+    <aside class="card cta-card cta-compact" aria-labelledby="cta-title">
+      <h3 id="cta-title">¿Hablamos?</h3>
+      <p class="meta"><strong>Disponibilidad inmediata</strong></p>
 
-        <!-- Valor para el reclutador -->
-        <div class="card">
-          <h3>Propuesta de valor</h3>
-          <ul>
-            <li><strong>Pentesting junior</strong> con experiencia práctica real en <em>explotación, automatización y análisis técnico</em></li>
-            <li><strong>Competencias</strong> en <em>Kali, Nmap, Burp, Metasploit, scripting Python/Bash y hardening.</em></li>
-            <li><strong>Reporting claro</strong> (evidencia, impacto, mitigación, CVSS) y foco en priorización.</li>
-          </ul>
+      <div class="cta-actions compact">
+        <a class="btn focus-ring"
+           href="https://www.linkedin.com/in/rubovicente/"
+           target="_blank" rel="noopener noreferrer">
+           LinkedIn
+        </a>
 
-          <h3>Interés / encaje</h3>
-          <p class="meta">
-             Aporto base sólida de sistemas
-            Windows/Linux, redes y hardening, y <strong>aprendizaje rápido</strong> para crecer en tu equipo.
-          </p>
-        </div>
+        <button class="btn ghost focus-ring" type="button" onclick="copyEmail()">
+          Copiar email
+        </button>
+
+        <a class="btn ghost focus-ring"
+           href="CV_Ruben_Vicente_Gilabert.pdf" download>
+           CV
+        </a>
       </div>
-    </section>
+
+      <p class="meta tiny">
+        <strong>Email:</strong> <span id="email-value">rubovicente@gmail.com</span>
+        <span class="sr-only" id="copy-status" aria-live="polite"></span>
+      </p>
+
+      <div class="cta-badges">
+        <span class="badge">ASIR</span>
+        <span class="badge">eJPTv2</span>
+        <span class="badge">Inglés C1</span>
+      </div>
+    </aside>
+
+  </div>
+</section>
 
   <footer class="container">
     <span>© <span id="year"></span> Rubén Vicente Gilabert</span>
     <span class="meta">Hecho con HTML/CSS. Sin trackers. <a href="CV_Ruben_Vicente_Gilabert.pdf">CV</a></span>
   </footer>
+
+  <script defer src="js/main.js"></script>
+</body>
+</html>
+
 
   <script defer src="js/main.js"></script>
 </body>
