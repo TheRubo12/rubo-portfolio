@@ -403,3 +403,45 @@ html, body{
     right:0;
   }
 }
+/* ===== Contacto v2 ===== */
+.contact--v2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* valor principal + CTA compacto */
+  gap: 24px;
+  align-items: start;
+}
+
+/* Columna principal */
+.contact-main {
+  padding: 24px;
+}
+
+/* CTA compacto */
+.cta-compact {
+  padding: 20px;
+}
+
+.cta-compact h3 {
+  margin-bottom: 8px;
+}
+
+.cta-actions.compact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Badges más compactos */
+.cta-compact .cta-badges {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact--v2 {
+    grid-template-columns: 1fr;
+  }
+}
