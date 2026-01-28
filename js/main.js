@@ -21,7 +21,7 @@ function $all(sel, ctx = document) { return Array.from(ctx.querySelectorAll(sel)
   onScroll();
 })();
 
-/* ====== Menú lateral accesible ====== */
+/* ====== Menú móvil (overlay + panel) ====== */
 (() => {
   const btn   = document.getElementById('nav-toggle');
   const panel = document.getElementById('primary-nav');
@@ -30,73 +30,72 @@ function $all(sel, ctx = document) { return Array.from(ctx.querySelectorAll(sel)
 
   let lastFocus = null;
 
-  function lockScroll(lock) {
-    document.documentElement.style.overflow = lock ? 'hidden' : '';
-    document.body.style.overscrollBehavior = lock ? 'contain' : '';
+  function setAria(open){
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    panel.setAttribute('aria-hidden', open ? 'false' : 'true');
   }
 
-  function firstFocusable(container) {
-    return container.querySelector('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
-  }
-
-  function openMenu() {
+  function openMenu(){
     lastFocus = document.activeElement;
-    btn.setAttribute('aria-expanded', 'true');
-    panel.classList.add('open');
-    panel.setAttribute('aria-hidden', 'false');
 
+    panel.classList.add('is-open');
+    scrim.classList.add('is-open');
     scrim.hidden = false;
-    requestAnimationFrame(() => scrim.classList.add('show'));
 
-    lockScroll(true);
+    document.body.classList.add('no-scroll');
+    setAria(true);
 
-    const first = firstFocusable(panel);
+    // focus al primer link/botón del panel
+    const first = panel.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
     if (first) first.focus();
   }
 
-  function closeMenu(options = {}) {
-    const { fromResize = false } = options;
+  function closeMenu(){
+    panel.classList.remove('is-open');
+    scrim.classList.remove('is-open');
 
-    btn.setAttribute('aria-expanded', 'false');
-    panel.classList.remove('open');
-    scrim.classList.remove('show');
-    lockScroll(false);
+    document.body.classList.remove('no-scroll');
+    setAria(false);
 
-    // En móvil: el panel se oculta y aria-hidden debe ser true
-    // En escritorio (fromResize): el panel es visible como menú normal ⇒ aria-hidden false
-    panel.setAttribute('aria-hidden', fromResize ? 'false' : 'true');
-
+    // ocultar scrim al terminar la transición
     setTimeout(() => {
-      if (!panel.classList.contains('open')) scrim.hidden = true;
-    }, 200);
+      if (!scrim.classList.contains('is-open')) scrim.hidden = true;
+    }, 220);
 
-    if (!fromResize && lastFocus && document.contains(lastFocus)) {
-      lastFocus.focus();
-    }
+    if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  }
+
+  function isOpen(){
+    return panel.classList.contains('is-open');
   }
 
   btn.addEventListener('click', () => {
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
-    expanded ? closeMenu() : openMenu();
+    isOpen() ? closeMenu() : openMenu();
   });
 
-  scrim.addEventListener('click', () => closeMenu());
+  // Cerrar click en overlay (scrim)
+  scrim.addEventListener('click', closeMenu);
 
+  // Cerrar con ESC
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeMenu();
+    if (e.key === 'Escape' && isOpen()) closeMenu();
   });
 
+  // Cerrar al click en links del panel
   panel.addEventListener('click', (e) => {
-    if (e.target.closest('a')) closeMenu();
+    if (e.target.closest('a') && isOpen()) closeMenu();
   });
 
-  // Al pasar a escritorio, cerramos modo cajón pero dejamos el menú accesible
+  // Al pasar a desktop, asegurar estado correcto
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 860) {
-      closeMenu({ fromResize: true });
-    }
+    if (window.innerWidth >= 861 && isOpen()) closeMenu();
   });
+
+  // Estado inicial consistente
+  setAria(false);
+  scrim.hidden = true;
 })();
+
 
 /* ====== Copiar email (expuesto global) ====== */
 window.copyEmail = function copyEmail() {
@@ -278,3 +277,86 @@ window.filterProjects = function filterProjects(tag, el) {
     initStepsToggles();
   }
 })();
+function initMobileMenu() {
+  const mobile = document.getElementById('mobileMenu');
+  const openBtn = document.getElementById('openMenu');
+  const closeBtn = document.getElementById('closeMenu');
+  if (!mobile || !openBtn) return;
+
+  let lastFocused = null;
+
+  function setAria(open) {
+    openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mobile.setAttribute('aria-hidden', open ? 'false' : 'true');
+  }
+
+  function openMobile() {
+    lastFocused = document.activeElement;
+
+    mobile.hidden = false;
+    mobile.classList.add('is-open');
+    document.body.classList.add('no-scroll');
+    setAria(true);
+
+    const firstLink = mobile.querySelector('.mobile-panel a, .mobile-panel button');
+    if (firstLink) firstLink.focus();
+
+    document.addEventListener('keydown', onKeydown);
+  }
+
+  function closeMobile() {
+    mobile.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
+    setAria(false);
+    mobile.hidden = true;
+
+    document.removeEventListener('keydown', onKeydown);
+
+    if (lastFocused && typeof lastFocused.focus === 'function') {
+      lastFocused.focus();
+    }
+  }
+
+  function onKeydown(e) {
+    if (e.key === 'Escape') closeMobile();
+  }
+
+  openBtn.addEventListener('click', openMobile);
+  if (closeBtn) closeBtn.addEventListener('click', closeMobile);
+
+  // Cerrar al click en el overlay
+  mobile.addEventListener('click', (e) => {
+    if (e.target === mobile) closeMobile();
+  });
+
+  // Cerrar al click en enlaces
+  mobile.querySelectorAll('.mobile-panel a').forEach(a => {
+    a.addEventListener('click', closeMobile);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initMobileMenu);
+
+/* ===== Botón volver arriba ===== */
+(() => {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+
+  const toggleBtn = () => {
+    const show = window.scrollY > 400;
+    btn.hidden = !show;
+    btn.classList.toggle('show', show);
+  };
+
+  window.addEventListener('scroll', toggleBtn, { passive:true });
+  toggleBtn(); // estado inicial
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+})();
+
+
