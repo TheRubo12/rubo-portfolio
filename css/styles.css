@@ -81,7 +81,7 @@ nav .left{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
   opacity:0; pointer-events:none; transition:opacity .18s ease;
   z-index:9;
 }
-.scrim.show{ opacity:1; pointer-events:auto; }
+.scrim.is-open{ opacity:1; pointer-events:auto; }
 
 /* ========== NAV DRAWER COMPACTO ========== */
 /* Importante: por defecto OCULTO */
@@ -106,7 +106,7 @@ nav .left{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 }
 
 /* Solo cuando está abierto en móvil */
-.nav-drawer.open{
+.nav-drawer.is-open{
   display:grid;
   gap:2px;
   transform:translateX(0);
@@ -394,15 +394,6 @@ html, body{
   hyphens:auto;
 }
 
-/* Por si acaso, asegurar que el drawer no se pasa de ancho en móvil */
-@media (max-width:860px){
-  .nav-drawer{
-    width:100%;
-    max-width:100%;
-    left:0;
-    right:0;
-  }
-}
 /* ===== Contacto v2 ===== */
 .contact--v2 {
   display: grid;
@@ -445,3 +436,5 @@ html, body{
     grid-template-columns: 1fr;
   }
 }
+
+
