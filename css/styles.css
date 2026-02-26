@@ -520,6 +520,139 @@ body.no-scroll{
 .back-to-top:hover{
   transform:translateY(-2px);
 }
+/* =====================================================
+   CTF CAROUSEL FINAL (peek + flechas fijas + inline)
+   ===================================================== */
+
+/* --- Contenedor principal --- */
+.ctf-carousel{
+  --peek: 48px; /* cuánto asoman las laterales */
+  position: relative;
+  padding-inline: var(--peek);
+}
+
+/* --- Flechas (posición absoluta, siempre visibles) --- */
+.ctf-nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--bd);
+  background: rgba(255,255,255,.05);
+  color: var(--txt);
+  font-size: 26px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.ctf-nav:hover{
+  background: rgba(255,255,255,.1);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.ctf-nav.prev{ left: 6px; }
+.ctf-nav.next{ right: 6px; }
+
+/* --- Viewport --- */
+.ctf-viewport{
+  overflow: visible; /* necesario para el efecto peek */
+  border-radius: 18px;
+}
+
+/* --- Track horizontal --- */
+.ctf-track{
+  display: flex;
+  gap: 14px;
+  padding: 6px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.ctf-track::-webkit-scrollbar{
+  display: none;
+}
+
+/* --- Cards --- */
+.ctf-track > article{
+  flex: 0 0 auto;
+  width: clamp(520px, 70vw, 720px);
+  scroll-snap-align: center;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+/* Opcional: efecto sutil en las laterales */
+.ctf-track > article{
+  opacity: .95;
+}
+
+/* =====================================================
+   Inline "Ver más"
+   ===================================================== */
+
+.ctf-pro .steps{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+  margin: 0;
+}
+
+.ctf-pro[data-open="true"] .steps{
+  max-height: 520px;
+  margin-top: 12px;
+}
+
+.ctf-pro .steps-wrapper .btn{
+  margin-top: 12px;
+}
+
+/* Navegación inline (si la usas) */
+.ctf-inline-nav{
+  display: none;
+  margin-top: 12px;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.ctf-pro[data-open="true"] .ctf-inline-nav{
+  display: flex;
+}
+
+.ctf-inline-nav .btn{
+  padding: 8px 12px;
+}
+
+/* =====================================================
+   Responsive
+   ===================================================== */
+
+@media (max-width: 900px){
+  .ctf-track > article{
+    width: clamp(460px, 80vw, 640px);
+  }
+}
+
+@media (max-width: 720px){
+  .ctf-carousel{
+    --peek: 18px;
+  }
+
+  .ctf-nav{
+    display: none; /* swipe en móvil */
+  }
+
+  .ctf-track > article{
+    width: 88vw;
+  }
+}
+
 
 
 
