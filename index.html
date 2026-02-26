@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Rubén Vicente Gilabert — Pentester Junior (ASIR) · eJPTv2 en progreso</title>
+  <title>Rubén Vicente Gilabert — Pentester Junior (ASIR) · eJPTv2 </title>
   <meta name="description" content="Portafolio técnico de Rubén Vicente Gilabert: estudiante de ASIR, eJPTv2 en progreso. Proyectos (apps y APIs), CTFs/Writeups con informes PDF y contacto. Disponible para prácticas / empleo." />
   <meta name="theme-color" content="#0f172a" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
@@ -12,7 +12,7 @@
   <!-- Canonical + Open Graph + Twitter -->
   <link rel="canonical" href="/">
   <meta property="og:title" content="Rubén Vicente — Pentester Junior" />
-  <meta property="og:description" content="Proyectos técnicos, CTFs/Writeups y contacto. ASIR · eJPTv2 en progreso · Cisco Intro a Ciberseguridad." />
+  <meta property="og:description" content="Proyectos técnicos, CTFs/Writeups y contacto. ASIR · eJPTv2 · Cisco Intro a Ciberseguridad." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="img/og-image.png" />
   <meta property="og:url" content="/" />
@@ -20,7 +20,7 @@
   <meta property="og:site_name" content="Rubén Vicente Gilabert — Pentester Junior" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rubén Vicente — Pentester Junior" />
-  <meta name="twitter:description" content="Proyectos, CTFs/Writeups y contacto. ASIR · eJPTv2 en progreso." />
+  <meta name="twitter:description" content="Proyectos, CTFs/Writeups y contacto. ASIR · eJPTv2" />
   <meta name="twitter:image" content="img/og-image.png" />
 
   <!-- Prefetch del CV -->
@@ -58,7 +58,7 @@
       "https://tryhackme.com/p/TU_USUARIO",
       "https://app.hackthebox.com/profile/TU_USUARIO"
     ],
-    "knowsAbout":[ "Pentesting web","Active Directory","OWASP","PTES","Burp Suite","Nmap" ]
+    "knowsAbout":[ "Pentesting web","Active Directory","OWASP","Burp Suite","Nmap" ]
   }
   </script>
 </head>
@@ -101,12 +101,12 @@
       <div>
         <div class="pill">Busco <strong>practicas / empleo</strong> · Valencia/Castellón/Remoto</div>
         <h1 id="hero-title">Hola, soy <span style="color:var(--acc)">Rubén</span>. <br/>Administrador de sistems y pentester junior enfocado en <em>Web, AD y CTFs</em>.</h1>
-        <p>Estudiante de <strong>ASIR</strong> y <strong>eJPTv2 (en progreso)</strong>. Me gusta romper cosas (con permiso) y escribir <strong>reportes claros</strong>. Practico en plataformas y laboratorios propios aplicando metodologías <abbr title="Open Web Application Security Project">OWASP</abbr> y PTES.</p>
+        <p>Estudiante de <strong>ASIR</strong> y <strong>eJPTv2</strong>. Me gusta romper cosas (con permiso) y escribir <strong>reportes claros</strong>. Practico en plataformas y laboratorios propios aplicando metodologías <abbr title="Open Web Application Security Project">OWASP</abbr>.</p>
         <p>Busco <strong>mi oportunidad en IT</strong> donde pueda aportar mis conocimientos en automatización, hardening y resolución de incidencias.</p>
         <div class="kpis" aria-label="Datos rápidos">
-          <div class="kpi"><div class="meta">Formación</div><strong>ASIR</strong> <span class="meta">· eJPTv2 en curso</span></div>
-          <div class="kpi"><div class="meta">Certs</div><strong>Cisco</strong> <span class="meta">Analista Junior</span></div>
-          <div class="kpi"><div class="meta">Curso</div><strong>120h</strong> <span class="meta">Ciberseguridad Avanzada TO</span></div>
+          <div class="kpi"><div class="meta">Formación</div><strong>ASIR</strong></div>
+          <div class="kpi"><div class="meta">Certificación</div><strong>Cisco</strong> <span class="meta">Analista Junior</span></div>
+          <div class="kpi"><div class="meta">Certificación</div><strong>eJPTv2</strong><span class="meta">INE</span></div>
         </div>
         <div style="margin-top:16px">
           <a class="btn focus-ring" href="#contacto">Hablemos</a>
@@ -206,7 +206,7 @@
     <!-- Mini “credenciales” opcional bajo las tarjetas -->
     <p class="meta" style="margin-top:12px">
       <strong>Certificación:</strong> Cisco Networking Academy — Junior Cybersecurity Analyst ·
-      <strong>Preparación:</strong> eJPTv2 (INE) en progreso.
+       eJPTv2 (INE).
     </p>
   </section>
 
@@ -1085,290 +1085,1812 @@
       </div>
     </section>
 
-   <!-- REPORTES / CTFs - Formato PRO -->
+<!-- REPORTES / CTFs - Formato PRO -->
 <section id="reportes" aria-labelledby="reportes-title">
   <h2 id="reportes-title">CTFs &amp; Informe (PDF)</h2>
 
-  <div class="grid cols-2">
+  <!-- Carrusel -->
+  <div class="ctf-carousel" data-ctf-carousel>
+    <button class="ctf-nav prev" type="button" aria-label="CTF anterior" data-ctf-prev>‹</button>
+
+    <div class="ctf-viewport" tabindex="0">
+      <div class="ctf-track" data-ctf-track>
 
         <!-- Redacción insegura en PDF (vulnerabilidad real) -->
-    <article class="card ctf-pro" aria-labelledby="ctf-pdf-title" data-project data-tags="web,pdf,rgpd,responsible-disclosure">
-      <header class="ctf-header">
-        <span class="provider">Vulnerabilidad real · Responsible disclosure</span>
-        <span class="date">2025</span>
-      </header>
+        <article class="card ctf-pro" aria-labelledby="ctf-pdf-title" data-project data-tags="web,pdf,rgpd,responsible-disclosure,information-disclosure">
+          <header class="ctf-header">
+            <span class="provider">Vulnerabilidad real · Responsible Disclosure</span>
+            <span class="date">2025</span>
+          </header>
 
-      <h3 id="ctf-pdf-title">Redacción insegura en PDF — DNIs visibles en la capa de texto</h3>
-      <p class="summary">
-        Detección de un fallo de privacidad en un PDF de una administración pública: los DNIs estaban visualmente tapados,
-        pero seguían presentes en la capa interna del archivo y podían recuperarse fácilmente.
-      </p>
+          <h3 id="ctf-pdf-title">Insecure PDF Redaction — Exposure of DNI Data</h3>
 
-      <div class="badges">
-        <span class="badge">Web</span>
-        <span class="badge">PDF</span>
-        <span class="badge">Protección de datos (RGPD)</span>
-        <span class="badge">Responsible disclosure</span>
-      </div>
+          <p class="summary">
+            Identificación de exposición de datos personales en un PDF publicado por una
+            administración pública. Los DNIs estaban visualmente ocultos, pero permanecían
+            accesibles en la capa de texto interna del documento, permitiendo su extracción.
+          </p>
 
-      <div class="steps-wrapper">
-        <ul class="steps">
-          <li>Identificación de que los DNIs aparecían “tachados” visualmente, pero seguían accesibles en la capa de texto del PDF.</li>
-          <li>Verificación controlada del fallo sin explotarlo ni descargar datos masivos, demostrando la posibilidad de recuperación.</li>
-          <li>Documentación del impacto (exposición de datos personales) y relación con el RGPD.</li>
-          <li>Notificación formal a la administración afectada, incluyendo recomendaciones técnicas de redacción segura de PDFs.</li>
-        </ul>
+          <div class="badges">
+            <span class="badge">Information Disclosure</span>
+            <span class="badge">PDF Structure</span>
+            <span class="badge">Data Protection</span>
+            <span class="badge">RGPD</span>
+            <span class="badge">Responsible Disclosure</span>
+          </div>
 
-        <button class="btn btn-ghost" type="button" data-steps-toggle>
-          Ver más
-        </button>
-      </div>
+          <div class="steps-wrapper">
+            <ul class="steps">
+              <li><strong>Análisis del documento:</strong> inspección del PDF y detección de que la “redacción” era únicamente visual.</li>
+              <li><strong>Validación técnica:</strong> extracción controlada de texto demostrando que los DNIs seguían presentes en la capa interna.</li>
+              <li><strong>Evaluación de impacto:</strong> exposición de datos personales protegidos (RGPD), riesgo de suplantación y uso indebido.</li>
+              <li><strong>Notificación formal:</strong> comunicación responsable a la entidad afectada incluyendo recomendaciones técnicas de redacción segura.</li>
+            </ul>
 
-      <footer class="ctf-footer">
-        <div class="tags">
-          <span class="tag">RGPD</span>
-          <span class="tag">PDF</span>
-          <span class="tag">Privacidad</span>
-          <span class="tag">Responsible disclosure</span>
-          <span class="tag">Reporting</span>
-        </div>
-        <div class="links">
-          <p class="meta">Informe no público por confidencialidad con la entidad.</p>
-          <!--
-          Si en el futuro haces un informe anonimizado, puedes activar esto:
-          <a class="btn" href="reportes/redaccion-segura-pdf.pdf" download>Descargar informe</a>
-          -->
-        </div>
-      </footer>
-    </article>
+            <button class="btn btn-ghost" type="button" data-steps-toggle">Ver más</button>
+          </div>
 
-    <!-- Ice -->
-    <article class="card ctf-pro open-pdf" aria-labelledby="ctf-ice-title" data-project data-tags="windows,icecast,cve">
-      <header class="ctf-header">
-        <span class="provider">TryHackMe</span>
-        <span class="date">06/2025</span>
-      </header>
+          <footer class="ctf-footer">
+            <div class="tags">
+              <span class="tag">privacy</span>
+              <span class="tag">pdf analysis</span>
+              <span class="tag">data exposure</span>
+              <span class="tag">reporting</span>
+            </div>
+            <div class="links">
+              <p class="meta">Informe no público por acuerdo de confidencialidad.</p>
+            </div>
+          </footer>
+        </article>
 
-      <h3 id="ctf-ice-title">Ice — Icecast CVE-2004-1561</h3>
-      <p class="summary">Exploit de Icecast; post-explotación con migrate/kiwi/hashdump; habilitación de RDP.</p>
+        <!-- Ice - Icecast RCE & Credential Dumping -->
+        <article class="card ctf-pro" aria-labelledby="ctf-ice-title"
+        data-project data-tags="windows,icecast,rce,credential-dumping,rdp,metasploit">
 
-      <div class="badges">
-        <span class="badge">Windows</span>
-        <span class="badge">8000/tcp Icecast</span>
-        <span class="badge">CVE-2004-1561</span>
-        <span class="badge">Post-Exploitation</span>
-      </div>
+          <header class="ctf-header">
+            <span class="provider">TryHackMe</span>
+            <span class="date">06/09/2025</span>
+          </header>
 
-      <div class="steps-wrapper">
-        <ul class="steps">
-          <li>Acceso inicial explotando la vulnerabilidad CVE-2004-1561 en Icecast.</li>
-          <li>Ejecución de código remoto mediante módulo de Metasploit.</li>
-          <li>Escalada de privilegios dentro de Windows utilizando técnicas de post-explotación / <code>kiwi</code> / <code>hashdump</code>.</li>
-          <li>Impacto simulado: compromiso total del sistema Windows con capacidad de robo de credenciales, habilitación de RDP y control completo de la máquina.</li>
-        </ul>
+          <h3 id="ctf-ice-title">
+            Ice — Icecast (CVE-2004-1561) RCE & Post-Exploitation
+          </h3>
 
-        <button class="btn btn-ghost" type="button" data-steps-toggle>
-          Ver más
-        </button>
-      </div>
+          <p class="summary">
+            Compromiso completo de servidor Windows mediante explotación remota
+            de la vulnerabilidad crítica CVE-2004-1561 en el servicio Icecast (8000/tcp),
+            seguido de técnicas de post-explotación para extracción de credenciales
+            y establecimiento de persistencia vía RDP.
+          </p>
 
-      <footer class="ctf-footer">
-        <div class="tags">
-          <span class="tag">nmap</span><span class="tag">metasploit</span>
-          <span class="tag">kiwi</span><span class="tag">hashdump</span><span class="tag">RDP</span>
-        </div>
-        <div class="links">
-          <a class="btn" href="https://github.com/TheRubo12/ctf-tryhackme-ice" download>Informe</a>
-        </div>
-      </footer>
-    </article>
+          <div class="badges">
+            <span class="badge">Windows</span>
+            <span class="badge">Icecast (8000/tcp)</span>
+            <span class="badge">CVE-2004-1561</span>
+            <span class="badge">RCE</span>
+            <span class="badge">Credential Dumping</span>
+            <span class="badge">Persistence</span>
+          </div>
 
-    <!-- Blue -->
-    <article class="card ctf-pro" aria-labelledby="ctf-blue-title">
-      <header class="ctf-header">
-        <span class="provider">TryHackMe</span>
-        <span class="date">2025</span>
-      </header>
-      <h3 id="ctf-blue-title">Blue — MS17-010 (EternalBlue)</h3>
-      <p class="summary">Explotación SMB en Windows con MS17-010; obtención de shell y escalada.</p>
-      <div class="badges">
-        <span class="badge">Windows</span>
-        <span class="badge">445/tcp SMB</span>
-        <span class="badge">MS17-010</span>
-        <span class="badge">CVE-2017-0144</span>
-      </div>
+          <div class="steps-wrapper">
+            <ul class="steps">
 
-      <div class="steps-wrapper">
-        <ul class="steps">
-          <li>Acceso inicial al servicio SMB (445) afectado por MS17-010.</li>
-          <li>Explotación de la vulnerabilidad que otorga una shell remota en la máquina víctima.</li>
-          <li>Escalada de privilegios: explotación directa otorgó acceso como <code>NT AUTHORITY\SYSTEM</code>.</li>
-          <li>Impacto simulado: acceso remoto total al sistema con control absoluto sobre la máquina víctima.</li>
-        </ul>
+              <li>
+                <strong>Reconocimiento:</strong>
+                Identificación del servicio Icecast vulnerable en 8000/tcp
+                mediante escaneo con <code>nmap</code>.
+              </li>
 
-        <button class="btn btn-ghost" type="button" data-steps-toggle>
-          Ver más
-        </button>
-      </div>
+              <li>
+                <strong>Explotación (Severidad: Crítica):</strong>
+                Uso del módulo <code>exploit/windows/http/icecast_header</code>
+                en Metasploit para lograr ejecución remota de código (RCE).
+              </li>
 
-      <footer class="ctf-footer">
-        <div class="tags">
-          <span class="tag">nmap</span><span class="tag">metasploit</span><span class="tag">SMB</span>
-        </div>
-        <div class="links">
-          <a class="btn" href="https://github.com/TheRubo12/ctf-tryhackme-blue" download>Informe</a>
-        </div>
-      </footer>
-    </article>
+              <li>
+                <strong>Post-explotación:</strong>
+                Migración de proceso y carga de módulo <code>kiwi</code>
+                para extracción de hashes y credenciales locales (<code>hashdump</code>).
+              </li>
 
-    <!-- Mr Robot -->
-    <article class="card ctf-pro" aria-labelledby="ctf-mrrobot-title">
-      <header class="ctf-header">
-        <span class="provider">TryHackMe</span>
-        <span class="date">2025</span>
-      </header>
-      <h3 id="ctf-mrrobot-title">Mr Robot — WordPress foothold</h3>
-      <p class="summary">Acceso por credenciales filtradas; escalada vía binario SUID nmap.</p>
-      <div class="badges">
-        <span class="badge">Linux</span>
-        <span class="badge">80/tcp Web</span>
-        <span class="badge">WordPress</span>
-      </div>
+              <li>
+                <strong>Persistencia (Severidad: Alta):</strong>
+                Habilitación de RDP mediante módulo
+                <code>post/windows/manage/enable_rdp</code>,
+                permitiendo acceso remoto continuo al sistema.
+              </li>
 
-      <div class="steps-wrapper">
-        <ul class="steps">
-          <li>Acceso inicial al CMS WordPress mediante credenciales obtenidas.</li>
-          <li>Ejecución de código remoto a través de la modificación de plantillas del tema.</li>
-          <li>Escalada de privilegios a través de un binario SUID <code>nmap</code> mal configurado.</li>
-          <li>Impacto simulado: acceso total al sistema, exfiltración de credenciales y capacidad de movimiento lateral.</li>
-        </ul>
+              <li>
+                <strong>Impacto:</strong>
+                Control total del sistema con privilegios elevados,
+                exfiltración de credenciales y posibilidad de
+                movimiento lateral en entorno corporativo.
+              </li>
 
-        <button class="btn btn-ghost" type="button" data-steps-toggle>
-          Ver más
-        </button>
-      </div>
+            </ul>
 
-      <footer class="ctf-footer">
-        <div class="tags">
-          <span class="tag">nmap</span><span class="tag">gobuster</span><span class="tag">hydra</span><span class="tag">wpscan</span>
-        </div>
-        <div class="links">
-          <a class="btn" href="https://github.com/TheRubo12/ctf-tryhackme-mr-robot" download>Informe</a>
-        </div>
-      </footer>
-    </article>
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
 
-    <!-- Anonymous -->
-    <article class="card ctf-pro" aria-labelledby="ctf-anonymous-title">
-      <header class="ctf-header">
-        <span class="provider">TryHackMe</span>
-        <span class="date">2025</span>
-      </header>
-      <h3 id="ctf-anonymous-title">Anonymous — FTP &amp; cron privesc</h3>
-      <p class="summary">Acceso anónimo por FTP; escalada mediante cronjob vulnerable.</p>
-      <div class="badges">
-        <span class="badge">Linux</span>
-        <span class="badge">21/tcp FTP</span>
-        <span class="badge">Cron</span>
-      </div>
+          <footer class="ctf-footer">
 
-      <div class="steps-wrapper">
-        <ul class="steps">
-          <li>Acceso inicial al servicio FTP (21) mediante login anónimo.</li>
-          <li>Ejecución remota de comandos al sobrescribir un script <code>clean.sh</code> ejecutado automáticamente en el sistema (cronjob).</li>
-          <li>Escalada de privilegios a root mediante un binario SUID (<code>/usr/bin/env</code>).</li>
-          <li>Impacto simulado: acceso total al sistema con permisos de administrador, posibilidad de modificar archivos, acceder a credenciales y controlar el servidor.</li>
-        </ul>
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">metasploit</span>
+              <span class="tag">meterpreter</span>
+              <span class="tag">kiwi</span>
+              <span class="tag">hashdump</span>
+              <span class="tag">rdp</span>
+              <span class="tag">windows hardening</span>
+              <span class="tag">reporting</span>
+            </div>
 
-        <button class="btn btn-ghost" type="button" data-steps-toggle>
-          Ver más
-        </button>
-      </div>
+            <div class="links">
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/Ice/report.pdf" target="_blank" rel="noopener">
+                Informe completo
+              </a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgo crítico: servicio Icecast sin parche permite RCE.
+                Riesgo elevado por robo de credenciales y habilitación de acceso persistente (RDP).
+              </p>
+            </div>
 
-      <footer class="ctf-footer">
-        <div class="tags">
-          <span class="tag">nmap</span><span class="tag">ftp</span><span class="tag">ReverseShell</span>
-        </div>
-        <div class="links">
-          <a class="btn" href="https://github.com/TheRubo12/ctf-tryhackme-anonymous" download>Informe</a>
-        </div>
-      </footer>
-    </article>
+          </footer>
+        </article>
 
-    <!-- JaulaCon -->
-    <article class="card ctf-pro" aria-labelledby="ctf-jaulacon-title">
-      <header class="ctf-header">
-        <span class="provider">TheHackersLabs</span>
-        <span class="date">2025</span>
-      </header>
-      <h3 id="ctf-jaulacon-title">JaulaCon — ShellShock RCE</h3>
-      <p class="summary">RCE vía CGI vulnerable (ShellShock) y consolidación del acceso.</p>
-      <div class="badges">
-        <span class="badge">Linux</span>
-        <span class="badge">80/tcp CGI</span>
-        <span class="badge">CVE-2014-6271</span>
-      </div>
+        <!-- Mr Robot - WordPress Compromise & SUID Escalation -->
+        <article class="card ctf-pro" aria-labelledby="ctf-mrrobot-title"
+        data-project data-tags="linux,wordpress,rce,credential-exposure,suid,privilege-escalation">
 
-      <div class="steps-wrapper">
-        <ul class="steps">
-          <li>Acceso inicial mediante inyección de comandos en la cabecera <code>User-Agent</code> (ShellShock).</li>
-          <li>Reverse shell establecida con éxito hacia la máquina del atacante.</li>
-          <li>Escalada a root no completada en este ejercicio, pero identificados binarios SUID potencialmente explotables.</li>
-          <li>Impacto simulado: ejecución remota de comandos en el servidor con posibilidad de comprometerlo totalmente.</li>
-        </ul>
+          <header class="ctf-header">
+            <span class="provider">TryHackMe</span>
+            <span class="date">04/09/2025</span>
+          </header>
 
-        <button class="btn btn-ghost" type="button" data-steps-toggle>
-          Ver más
-        </button>
-      </div>
+          <h3 id="ctf-mrrobot-title">
+            Mr Robot — WordPress Compromise & SUID Privilege Escalation
+          </h3>
 
-      <footer class="ctf-footer">
-        <div class="tags">
-          <span class="tag">nmap</span><span class="tag">Burp</span><span class="tag">gobuster</span>
-        </div>
-        <div class="links">
-          <a class="btn" href="https://github.com/TheRubo12/ctf-thehackerslabs-jaulacon" download>Informe</a>
-        </div>
-      </footer>
-    </article>
+          <p class="summary">
+            Compromiso completo de servidor Linux partiendo de un CMS WordPress expuesto,
+            descubrimiento de credenciales en archivos públicos, ejecución remota de código
+            mediante modificación de plantillas y escalada de privilegios explotando un
+            binario <code>nmap</code> con permisos SUID inseguros.
+          </p>
 
-    <!-- Vulnyx Basic -->
-    <article class="card ctf-pro" aria-labelledby="ctf-vulnyx-basic-title">
-      <header class="ctf-header">
-        <span class="provider">Vulnyx</span>
-        <span class="date">2025</span>
-      </header>
-      <h3 id="ctf-vulnyx-basic-title">Basic — SSH bruteforce &amp; SUID</h3>
-      <p class="summary">Acceso por fuerza bruta SSH y escalada con binario SUID mal configurado.</p>
-      <div class="badges">
-        <span class="badge">Linux</span>
-        <span class="badge">22/tcp SSH</span>
-        <span class="badge">Post-Exploitation</span>
-      </div>
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">WordPress</span>
+            <span class="badge">Credential Exposure</span>
+            <span class="badge">RCE</span>
+            <span class="badge">SUID Abuse</span>
+            <span class="badge">Privilege Escalation</span>
+          </div>
 
-      <div class="steps-wrapper">
-        <ul class="steps">
-          <li>Acceso inicial al servicio SSH mediante un ataque de fuerza bruta sobre el usuario <code>dimitri</code>.</li>
-          <li>Escalada de privilegios a root explotando un binario con permisos SUID (<code>env</code>).</li>
-          <li>Impacto simulado: compromiso total del servidor Linux, con capacidad de ejecutar comandos como administrador y acceso a información sensible.</li>
-        </ul>
+          <div class="steps-wrapper">
+            <ul class="steps">
 
-        <button class="btn btn-ghost" type="button" data-steps-toggle>
-          Ver más
-        </button>
-      </div>
+              <li>
+                <strong>Reconocimiento:</strong>
+                Identificación de servicios SSH (22), HTTP (80) y HTTPS (443).
+                Enumeración de directorios con <code>gobuster</code>,
+                revelando rutas como <code>/wp-login</code> y <code>/license</code>.
+              </li>
 
-      <footer class="ctf-footer">
-        <div class="tags">
-          <span class="tag">nmap</span><span class="tag">hydra</span><span class="tag">GTFOBins</span>
-        </div>
-        <div class="links">
-          <a class="btn" href="https://github.com/TheRubo12/ctf-vulnyx-basic" download>Informe</a>
-        </div>
-      </footer>
-    </article>
+              <li>
+                <strong>Descubrimiento de credenciales (Severidad: Alta):</strong>
+                Archivo <code>license</code> contenía cadena en Base64 que,
+                tras decodificación, reveló credenciales válidas del usuario
+                <code>elliot</code>.
+              </li>
 
-  </div>
+              <li>
+                <strong>Acceso al CMS:</strong>
+                Autenticación en WordPress y modificación de plantilla 404
+                para inyectar reverse shell (RCE autenticada).
+              </li>
+
+              <li>
+                <strong>Movimiento lateral:</strong>
+                Obtención y crackeo de hash MD5 del usuario <code>robot</code>,
+                permitiendo acceso a cuenta local adicional.
+              </li>
+
+              <li>
+                <strong>Escalada de privilegios (Severidad: Crítica):</strong>
+                Abuso del modo interactivo de <code>nmap</code> con permisos SUID,
+                ejecutando <code>/bin/sh</code> como <code>root</code>.
+              </li>
+
+              <li>
+                <strong>Impacto:</strong>
+                Control total del servidor, ejecución arbitraria de comandos,
+                acceso a archivos sensibles y potencial pivoting hacia otros sistemas.
+              </li>
+
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">gobuster</span>
+              <span class="tag">wpscan</span>
+              <span class="tag">base64 decode</span>
+              <span class="tag">hash cracking</span>
+              <span class="tag">md5</span>
+              <span class="tag">reverse shell</span>
+              <span class="tag">linux hardening</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/Mr-Robot/report.pdf" target="_blank" rel="noopener">
+                Informe completo
+              </a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: exposición de credenciales en archivos públicos,
+                ejecución remota vía CMS y binario SUID inseguro que permite escalada directa a root.
+              </p>
+            </div>
+
+          </footer>
+        </article>
+
+       <!-- Anonymous - FTP Abuse & Cron Privilege Escalation -->
+        <article class="card ctf-pro" aria-labelledby="ctf-anonymous-title"
+        data-project data-tags="linux,ftp,cron,reverse-shell,suid,privilege-escalation">
+
+          <header class="ctf-header">
+            <span class="provider">TryHackMe</span>
+            <span class="date">04/09/2025</span>
+          </header>
+
+          <h3 id="ctf-anonymous-title">
+            Anonymous — Anonymous FTP Abuse & Cron Privilege Escalation
+          </h3>
+
+          <p class="summary">
+            Compromiso completo de servidor Linux iniciando con acceso anónimo al servicio FTP,
+            ejecución remota de comandos mediante sobrescritura de un script ejecutado por cron
+            y escalada de privilegios explotando un binario SUID mal configurado.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">FTP (21/tcp)</span>
+            <span class="badge">Cron Misconfiguration</span>
+            <span class="badge">Reverse Shell</span>
+            <span class="badge">SUID Abuse</span>
+            <span class="badge">Privilege Escalation</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+
+              <li>
+                <strong>Reconocimiento:</strong>
+                Identificación de servicios expuestos (FTP, SSH, SMB) mediante <code>nmap</code>.
+              </li>
+
+              <li>
+                <strong>Acceso inicial (Severidad: Alta):</strong>
+                Login anónimo habilitado en FTP permitió acceso sin credenciales
+                al sistema de ficheros y subida de archivos maliciosos.
+              </li>
+
+              <li>
+                <strong>Ejecución remota (Severidad: Crítica):</strong>
+                Sobrescritura del script <code>clean.sh</code>, ejecutado periódicamente
+                por cron, logrando reverse shell cuando el job se ejecuta.
+              </li>
+
+              <li>
+                <strong>Escalada de privilegios (Severidad: Crítica):</strong>
+                Identificación del binario <code>/usr/bin/env</code> con permisos SUID
+                y ejecución de <code>/bin/sh -p</code> para obtener acceso como <code>root</code>.
+              </li>
+
+              <li>
+                <strong>Impacto:</strong>
+                Control total del sistema Linux, ejecución arbitraria de comandos,
+                acceso a archivos sensibles y posibilidad de pivoting interno.
+              </li>
+
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">ftp</span>
+              <span class="tag">cron</span>
+              <span class="tag">reverse shell</span>
+              <span class="tag">find suid</span>
+              <span class="tag">gtfobins</span>
+              <span class="tag">linux hardening</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/Anonymous/report.pdf" target="_blank" rel="noopener">
+                Informe completo
+              </a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: FTP anónimo habilitado, cron job sobrescribible y
+                binario SUID inseguro que permite escalada directa a root.
+              </p>
+            </div>
+
+          </footer>
+        </article>
+
+        <!-- Blue - MS17-010 EternalBlue -->
+        <article class="card ctf-pro" aria-labelledby="ctf-blue-title"
+        data-project data-tags="windows,smb,ms17-010,eternalblue,rce,metasploit">
+
+          <header class="ctf-header">
+            <span class="provider">TryHackMe</span>
+            <span class="date">05/09/2025</span>
+          </header>
+
+          <h3 id="ctf-blue-title">
+            Blue — MS17-010 (EternalBlue) Remote Code Execution
+          </h3>
+
+          <p class="summary">
+            Compromiso completo de servidor Windows mediante explotación remota
+            de la vulnerabilidad crítica MS17-010 (EternalBlue) en el servicio
+            SMBv1, obteniendo acceso con privilegios <code>NT AUTHORITY\SYSTEM</code>.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Windows</span>
+            <span class="badge">SMB (445/tcp)</span>
+            <span class="badge">MS17-010</span>
+            <span class="badge">EternalBlue</span>
+            <span class="badge">RCE</span>
+            <span class="badge">Privilege SYSTEM</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+
+              <li>
+                <strong>Reconocimiento:</strong>
+                Identificación del servicio SMB expuesto en 445/tcp mediante <code>nmap</code>.
+              </li>
+
+              <li>
+                <strong>Enumeración (Severidad: Crítica):</strong>
+                Ejecución de <code>nmap --script vuln</code> confirmando vulnerabilidad
+                MS17-010 en servidor Windows sin parche.
+              </li>
+
+              <li>
+                <strong>Explotación:</strong>
+                Uso del módulo <code>exploit/windows/smb/ms17_010_eternalblue</code>
+                en Metasploit, obteniendo sesión Meterpreter.
+              </li>
+
+              <li>
+                <strong>Post-explotación:</strong>
+                Migración de proceso y confirmación de privilegios
+                <code>NT AUTHORITY\SYSTEM</code>.
+              </li>
+
+              <li>
+                <strong>Impacto:</strong>
+                Ejecución remota de código con privilegios máximos,
+                control absoluto del sistema y posibilidad de movimiento lateral
+                en red corporativa.
+              </li>
+
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">msfconsole</span>
+              <span class="tag">meterpreter</span>
+              <span class="tag">smbv1</span>
+              <span class="tag">patch management</span>
+              <span class="tag">windows hardening</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/Blue/report.pdf" target="_blank" rel="noopener">
+                Informe completo
+              </a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgo crítico: sistema Windows sin parche MS17-010,
+                permitiendo ejecución remota con privilegios SYSTEM.
+              </p>
+            </div>
+
+          </footer>
+        </article>
+
+        <!-- JaulaCon - ShellShock RCE -->
+        <article class="card ctf-pro" aria-labelledby="ctf-jaulacon-title"
+        data-project data-tags="linux,cgi,shellshock,rce,reverse-shell,suid">
+
+          <header class="ctf-header">
+            <span class="provider">TheHackersLabs</span>
+            <span class="date">05/09/2025</span>
+          </header>
+
+          <h3 id="ctf-jaulacon-title">
+            JaulaCon — ShellShock (CVE-2014-6271) Remote Code Execution
+          </h3>
+
+          <p class="summary">
+            Explotación de vulnerabilidad crítica ShellShock en servicio CGI expuesto,
+            permitiendo ejecución remota de comandos mediante inyección en cabecera HTTP
+            <code>User-Agent</code> y obtención de reverse shell con privilegios del servicio web.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">HTTP (8080)</span>
+            <span class="badge">CGI</span>
+            <span class="badge">ShellShock</span>
+            <span class="badge">RCE</span>
+            <span class="badge">Post-Exploitation</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+
+              <li>
+                <strong>Reconocimiento:</strong>
+                Identificación de servicios HTTP en 80 y 8080,
+                incluyendo directorio <code>/cgi-bin/</code> accesible.
+              </li>
+
+              <li>
+                <strong>Explotación (Severidad: Crítica):</strong>
+                Inyección de payload ShellShock en cabecera
+                <code>User-Agent</code>:
+                <code>() { :; }; /bin/bash -c 'whoami'</code>,
+                confirmando ejecución remota de comandos.
+              </li>
+
+              <li>
+                <strong>Obtención de acceso interactivo:</strong>
+                Envío de reverse shell hacia máquina atacante
+                logrando acceso como <code>www-data</code>.
+              </li>
+
+              <li>
+                <strong>Post-explotación:</strong>
+                Enumeración de binarios con bit SUID activado,
+                identificando posibles vectores de escalada.
+              </li>
+
+              <li>
+                <strong>Impacto:</strong>
+                Ejecución remota de código (RCE) en servidor web,
+                con riesgo elevado de compromiso total si existen
+                binarios SUID explotables.
+              </li>
+
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">gobuster</span>
+              <span class="tag">shellshock</span>
+              <span class="tag">cgi</span>
+              <span class="tag">reverse shell</span>
+              <span class="tag">find suid</span>
+              <span class="tag">linux hardening</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TheHackersLabs/JaulaCon/report.pdf" target="_blank" rel="noopener">
+                Informe completo
+              </a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgo crítico: vulnerabilidad ShellShock sin parche que permite RCE.
+                Riesgo adicional por presencia de binarios SUID inseguros.
+              </p>
+            </div>
+
+          </footer>
+        </article>
+
+        <!-- Vulnyx - Basic -->
+        <article class="card ctf-pro" aria-labelledby="ctf-vulnyx-basic-title"
+        data-project data-tags="linux,ssh,bruteforce,suid,privilege-escalation,hardening">
+
+          <header class="ctf-header">
+            <span class="provider">Vulnyx</span>
+            <span class="date">04/09/2025</span>
+          </header>
+
+          <h3 id="ctf-vulnyx-basic-title">
+            Basic — SSH Bruteforce & SUID Privilege Escalation
+          </h3>
+
+          <p class="summary">
+            Compromiso completo de servidor Linux mediante ataque de fuerza bruta
+            sobre servicio SSH y posterior escalada de privilegios explotando un
+            binario SUID mal configurado (<code>/usr/bin/env</code>).
+          </p>
+
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">SSH (22/tcp)</span>
+            <span class="badge">Bruteforce</span>
+            <span class="badge">SUID Misconfiguration</span>
+            <span class="badge">Privilege Escalation</span>
+            <span class="badge">GTFOBins</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+
+              <li>
+                <strong>Reconocimiento:</strong> Identificación de servicios expuestos
+                (SSH, HTTP, CUPS) mediante escaneo con <code>nmap</code>.
+              </li>
+
+              <li>
+                <strong>Acceso inicial (Severidad: Alta):</strong>
+                Ataque de fuerza bruta contra el usuario <code>dimitri</code>
+                utilizando <code>hydra</code> y wordlist <code>rockyou.txt</code>,
+                obteniendo credenciales válidas.
+              </li>
+
+              <li>
+                <strong>Post-explotación:</strong> Enumeración del sistema y búsqueda
+                de binarios con bit SUID activado mediante
+                <code>find / -perm -4000</code>.
+              </li>
+
+              <li>
+                <strong>Escalada de privilegios (Severidad: Crítica):</strong>
+                Abuso del binario <code>/usr/bin/env</code> con permisos SUID,
+                permitiendo ejecución de <code>/bin/sh -p</code> y obtención
+                de shell como <code>root</code>.
+              </li>
+
+              <li>
+                <strong>Impacto:</strong> Control total del sistema, ejecución de
+                comandos privilegiados y acceso a información sensible.
+              </li>
+
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">hydra</span>
+              <span class="tag">rockyou</span>
+              <span class="tag">find suid</span>
+              <span class="tag">gtfobins</span>
+              <span class="tag">linux hardening</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/Vulnyx/Basic/report.pdf" target="_blank" rel="noopener">
+                Informe completo
+              </a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: contraseña débil en SSH y permisos SUID inseguros que
+                permiten escalada directa a root.
+              </p>
+            </div>
+
+          </footer>
+        </article>
+        <!-- Basic Pentesting -->
+        <article class="card ctf-pro" aria-labelledby="ctf-basicpentesting-title" data-project data-tags="linux,web,smb,ssh,hydra,john">
+          <header class="ctf-header">
+            <span class="provider">CTF / Lab</span>
+            <span class="date">02/2026</span>
+          </header>
+
+          <h3 id="ctf-basicpentesting-title">Basic Pentesting — Web disclosure + SMB enum + SSH lateral</h3>
+
+          <p class="summary">
+            Compromiso completo de una máquina Linux mediante divulgación de información en web (<code>/development</code>),
+            enumeración SMB, fuerza bruta contra SSH y movimiento lateral usando una clave privada SSH protegida con
+            passphrase débil.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">80/tcp Web</span>
+            <span class="badge">139/445 SMB</span>
+            <span class="badge">22/tcp SSH</span>
+            <span class="badge">Lateral Movement</span>
+            <span class="badge">Password Weakness</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+              <li><strong>Reconocimiento:</strong> escaneo de puertos y servicios (SSH, HTTP, SMB, AJP y Tomcat) con <code>nmap</code>.</li>
+              <li><strong>Enumeración web:</strong> fuzzing de directorios con <code>gobuster</code> y hallazgo de <code>/development/</code> con ficheros internos (<code>dev.txt</code>, <code>j.txt</code>) que revelan usuarios y pistas operativas.</li>
+              <li><strong>Enumeración SMB:</strong> identificación de usuarios (<code>jan</code>, <code>kay</code>, <code>ubuntu</code>) y acceso a recurso anónimo con <code>enum4linux</code> / <code>smbclient</code>.</li>
+              <li><strong>Acceso inicial:</strong> validación de usuario <code>jan</code> y obtención de credenciales por fuerza bruta SSH con <code>hydra</code>.</li>
+              <li><strong>Movimiento lateral:</strong> acceso a <code>/home/kay</code> y extracción de clave privada <code>id_rsa</code> del usuario <code>kay</code>.</li>
+              <li><strong>Crackeo de passphrase:</strong> conversión con <code>ssh2john</code> y crackeo con <code>john</code> + <code>rockyou</code> para desbloquear la clave.</li>
+              <li><strong>Impacto:</strong> acceso como <code>kay</code> y lectura de <code>pass.bak</code>, demostrando exposición de información sensible y compromiso total del host.</li>
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">gobuster</span>
+              <span class="tag">enum4linux</span>
+              <span class="tag">smbclient</span>
+              <span class="tag">hydra</span>
+              <span class="tag">ssh2john</span>
+              <span class="tag">john</span>
+              <span class="tag">rockyou</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <!-- Si tienes repo o PDF público, cambia el href -->
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/Basic-Pentesting/report.pdf" target="_blank" rel="noopener">Informe</a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: divulgación de información, acceso SMB anónimo, contraseñas débiles y gestión insegura de claves SSH.
+              </p>
+            </div>
+          </footer>
+        </article>
+        <!-- Blog - WordPress RCE & SUID Privesc -->
+        <article class="card ctf-pro" aria-labelledby="ctf-blog-title" data-project data-tags="wordpress,linux,smb,rce,suid,metasploit">
+          <header class="ctf-header">
+            <span class="provider">CTF / Lab</span>
+            <span class="date">02/2026</span>
+          </header>
+
+          <h3 id="ctf-blog-title">Blog — WordPress RCE + SUID Privilege Escalation</h3>
+
+          <p class="summary">
+            Compromiso completo de un servidor WordPress 5.0 mediante enumeración de usuarios,
+            fuerza bruta de credenciales, explotación remota con <code>wp_crop_rce</code> y escalada
+            de privilegios a root a través de un binario SUID vulnerable que dependía de una
+            variable de entorno manipulable.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">WordPress 5.0</span>
+            <span class="badge">SMB</span>
+            <span class="badge">RCE</span>
+            <span class="badge">SUID</span>
+            <span class="badge">Privilege Escalation</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+              <li><strong>Reconocimiento:</strong> escaneo con <code>nmap</code> identificando SSH (22), HTTP (80 – WordPress 5.0) y SMB (139/445).</li>
+
+              <li><strong>Enumeración SMB:</strong> detección del recurso compartido <code>BillySMB</code> con permisos READ/WRITE y descarga de archivos mediante <code>smbmap</code> y <code>smbclient</code>.</li>
+
+              <li><strong>Enumeración WordPress:</strong> identificación de usuarios <code>bjoel</code> y <code>kwheel</code> con <code>wpscan</code> a través de la API REST.</li>
+
+              <li><strong>Fuerza bruta:</strong> obtención de credenciales válidas (<code>kwheel : cutiepie1</code>) utilizando <code>wpscan</code> + <code>rockyou</code>.</li>
+
+              <li><strong>Explotación remota:</strong> uso del módulo <code>exploit/multi/http/wp_crop_rce</code> en Metasploit, logrando sesión Meterpreter como <code>www-data</code>.</li>
+
+              <li><strong>Enumeración interna:</strong> localización de archivos sensibles (<code>user.txt</code>) y análisis de binarios SUID.</li>
+
+              <li><strong>Escalada de privilegios:</strong> análisis del binario <code>/usr/sbin/checker</code> con <code>ltrace</code>, identificación de llamada a <code>getenv("admin")</code> y manipulación de variable de entorno para obtener shell root.</li>
+
+              <li><strong>Impacto:</strong> acceso completo al sistema y lectura de <code>/root/root.txt</code>, demostrando compromiso total del servidor.</li>
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">smbmap</span>
+              <span class="tag">smbclient</span>
+              <span class="tag">wpscan</span>
+              <span class="tag">metasploit</span>
+              <span class="tag">meterpreter</span>
+              <span class="tag">ltrace</span>
+              <span class="tag">env injection</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <!-- Cambia el enlace si tienes repo o PDF público -->
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/Blog/report.pdf" target="_blank" rel="noopener">Informe</a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: contraseñas débiles en WordPress, explotación autenticada RCE y
+                binario SUID vulnerable a manipulación de variables de entorno.
+              </p>
+            </div>
+          </footer>
+        </article>
+        <!-- Pickle Rick - Web Enum + Command Injection + Sudo Abuse -->
+        <article class="card ctf-pro" aria-labelledby="ctf-picklerick-title" data-project data-tags="linux,web,command-exec,sudo,misconfiguration">
+          <header class="ctf-header">
+            <span class="provider">CTF / Lab</span>
+            <span class="date">02/2026</span>
+          </header>
+
+          <h3 id="ctf-picklerick-title">Pickle Rick — Web Enumeration & Sudo Privilege Abuse</h3>
+
+          <p class="summary">
+            Compromiso del sistema mediante enumeración web básica, reutilización de credenciales
+            expuestas en código fuente y <code>robots.txt</code>, acceso a panel administrativo con
+            ejecución de comandos y abuso de privilegios <code>sudo</code> sin contraseña para
+            obtener acceso completo al sistema.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">Apache</span>
+            <span class="badge">Web Panel</span>
+            <span class="badge">Command Execution</span>
+            <span class="badge">Sudo Misconfig</span>
+            <span class="badge">Privilege Escalation</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+              <li><strong>Reconocimiento:</strong> escaneo con <code>nmap</code> identificando servicios SSH (22) y HTTP (80).</li>
+
+              <li><strong>Enumeración web:</strong> revisión del código fuente HTML donde se detecta el usuario <code>R1ckRul3s</code> incrustado en comentarios.</li>
+
+              <li><strong>Revisión de robots.txt:</strong> hallazgo de contraseña en archivo público (<code>Wubbalubbadubdub</code>).</li>
+
+              <li><strong>Acceso al panel:</strong> autenticación exitosa en <code>login.php</code> con credenciales expuestas.</li>
+
+              <li><strong>Ejecución de comandos:</strong> uso del panel administrativo para ejecutar comandos del sistema y enumerar archivos internos.</li>
+
+              <li><strong>Obtención de ingredientes:</strong>
+                <ul>
+                  <li>Acceso directo a <code>Sup3rS3cretPickl3Ingred.txt</code>.</li>
+                  <li>Lectura de <code>/home/rick/second ingredients</code> mediante <code>less</code>.</li>
+                  <li>Acceso a <code>/root/3rdingredient.txt</code> usando privilegios elevados.</li>
+                </ul>
+              </li>
+
+              <li><strong>Escalada de privilegios:</strong> verificación con <code>sudo -l</code> que permite ejecución como root sin contraseña, facilitando acceso total al sistema.</li>
+
+              <li><strong>Impacto:</strong> acceso a directorios protegidos (<code>/root</code>) y demostración de compromiso completo del host.</li>
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">source-code review</span>
+              <span class="tag">robots.txt</span>
+              <span class="tag">credential exposure</span>
+              <span class="tag">web shell</span>
+              <span class="tag">sudo -l</span>
+              <span class="tag">linux enum</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <!-- Sustituye por enlace real si lo publicas -->
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/Pickle-Rick/report.pdf" target="_blank" rel="noopener">Informe</a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: exposición de credenciales en archivos públicos, ejecución remota de comandos
+                vía panel web y configuración insegura de sudo que permite escalada directa a root.
+              </p>
+            </div>
+          </footer>
+        </article>
+        <!-- RootMe - File Upload RCE + SUID Privesc -->
+        <article class="card ctf-pro" aria-labelledby="ctf-rootme-title" data-project data-tags="linux,web,file-upload,rce,suid,reverse-shell">
+          <header class="ctf-header">
+            <span class="provider">CTF / Lab</span>
+            <span class="date">02/2026</span>
+          </header>
+
+          <h3 id="ctf-rootme-title">RootMe — File Upload RCE & SUID Privilege Escalation</h3>
+
+          <p class="summary">
+            Compromiso completo del sistema mediante explotación de una funcionalidad
+            insegura de subida de archivos en un panel web, obtención de reverse shell
+            como <code>www-data</code> y escalada de privilegios aprovechando un binario
+            SUID <code>python2.7</code> mal configurado.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">Apache</span>
+            <span class="badge">File Upload</span>
+            <span class="badge">Reverse Shell</span>
+            <span class="badge">SUID Abuse</span>
+            <span class="badge">Privilege Escalation</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+              <li><strong>Reconocimiento:</strong> escaneo con <code>nmap</code> identificando servicios SSH (22) y HTTP (80).</li>
+
+              <li><strong>Enumeración web:</strong> descubrimiento de los directorios <code>/panel/</code> y <code>/uploads/</code> mediante <code>gobuster</code>.</li>
+
+              <li><strong>Identificación de vector:</strong> detección de formulario de subida de archivos en <code>/panel/</code>, posible punto de ejecución remota.</li>
+
+              <li><strong>Preparación de payload:</strong> configuración del script <code>php-reverse-shell</code> modificando IP y puerto del atacante.</li>
+
+              <li><strong>Explotación:</strong> subida del archivo PHP malicioso y ejecución desde el navegador, obteniendo shell remota como <code>www-data</code>.</li>
+
+              <li><strong>Estabilización:</strong> mejora de la TTY usando <code>script</code>, <code>stty raw -echo</code> y configuración de entorno bash interactivo.</li>
+
+              <li><strong>Post-explotación:</strong> enumeración del sistema y obtención de <code>user.txt</code> confirmando acceso inicial.</li>
+
+              <li><strong>Escalada de privilegios:</strong> identificación de binario SUID <code>python2.7</code> y ejecución de shell privilegiada con:
+                <code>python -c 'import os; os.execl("/bin/sh", "sh", "-p")'</code>.
+              </li>
+
+              <li><strong>Impacto:</strong> acceso como <code>root</code> y lectura de <code>/root/root.txt</code>, demostrando compromiso total del sistema.</li>
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">gobuster</span>
+              <span class="tag">php-reverse-shell</span>
+              <span class="tag">nc</span>
+              <span class="tag">tty stabilization</span>
+              <span class="tag">find / -perm -4000</span>
+              <span class="tag">python suid</span>
+              <span class="tag">linux enum</span>
+            </div>
+
+            <div class="links">
+              <!-- Sustituye por enlace real si lo publicas -->
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/RootMe/report.pdf" target="_blank" rel="noopener">Informe</a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: subida de archivos sin validación adecuada, ejecución remota de código
+                y abuso de binarios SUID que permiten escalada directa a root.
+              </p>
+            </div>
+          </footer>
+        </article>
+        <!-- Startup - FTP Abuse + PCAP Credential Leak + Cron PrivEsc -->
+        <article class="card ctf-pro" aria-labelledby="ctf-startup-title" data-project data-tags="linux,ftp,pcap,reverse-shell,cron,privilege-escalation">
+          <header class="ctf-header">
+            <span class="provider">CTF / Lab</span>
+            <span class="date">2026</span>
+          </header>
+
+          <h3 id="ctf-startup-title">Startup — Anonymous FTP → PCAP Credential Leak → Cron PrivEsc</h3>
+
+          <p class="summary">
+            Compromiso completo del sistema mediante abuso de FTP anónimo escribible,
+            ejecución remota a través de directorio web expuesto, extracción de credenciales
+            desde un archivo PCAP y escalada de privilegios explotando un script ejecutado
+            periódicamente por root.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">vsFTPd 3.0.3</span>
+            <span class="badge">Apache</span>
+            <span class="badge">Anonymous FTP</span>
+            <span class="badge">PCAP Analysis</span>
+            <span class="badge">Cron Misconfig</span>
+            <span class="badge">Privilege Escalation</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+              <li>
+                <strong>Reconocimiento:</strong> escaneo con <code>nmap -A</code> identificando
+                FTP (login anónimo permitido y escribible), SSH y HTTP.
+              </li>
+
+              <li>
+                <strong>Acceso FTP anónimo:</strong> descarga de <code>notice.txt</code> e
+                <code>important.jpg</code>, identificando directorio <code>ftp/</code> con permisos de escritura.
+              </li>
+
+              <li>
+                <strong>Enumeración web:</strong> descubrimiento de <code>/files/</code> con
+                contenido accesible públicamente que refleja el FTP.
+              </li>
+
+              <li>
+                <strong>Obtención de acceso inicial:</strong> subida de webshell PHP vía FTP
+                y ejecución remota desde <code>/files/ftp/</code>, obteniendo shell como
+                <code>www-data</code>.
+              </li>
+
+              <li>
+                <strong>Post-explotación:</strong> identificación de <code>/incidents/suspicious.pcapng</code>,
+                copia al FTP y descarga para análisis.
+              </li>
+
+              <li>
+                <strong>Análisis forense del PCAP:</strong> uso de Wireshark (Follow TCP Stream)
+                para recuperar credenciales en texto claro:
+                <code>lennie : c4ntg3t3n0ughsp1c3</code>.
+              </li>
+
+              <li>
+                <strong>Acceso lateral:</strong> conexión SSH como <code>lennie</code> y obtención de user flag.
+              </li>
+
+              <li>
+                <strong>Escalada de privilegios:</strong> identificación de script
+                <code>planner.sh</code> ejecutado por root y archivo <code>print.sh</code>
+                editable por el usuario. Modificación del script para inyectar reverse shell
+                y obtención de acceso root mediante ejecución automática (cron).
+              </li>
+
+              <li>
+                <strong>Impacto:</strong> acceso como <code>root</code> y lectura de
+                <code>/root/root.txt</code>, demostrando compromiso total del host.
+              </li>
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">ftp</span>
+              <span class="tag">webshell</span>
+              <span class="tag">pcap analysis</span>
+              <span class="tag">wireshark</span>
+              <span class="tag">ssh</span>
+              <span class="tag">pspy</span>
+              <span class="tag">cron exploit</span>
+              <span class="tag">linux enum</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <!-- Sustituir si publicas el write-up -->
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/Startup/report.pdf" target="_blank" rel="noopener">Informe</a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: FTP anónimo con permisos de escritura, exposición de
+                credenciales en tráfico capturado y ejecución insegura de scripts
+                automatizados con privilegios elevados.
+              </p>
+            </div>
+          </footer>
+        </article>
+        <!-- TakeOver - Subdomain Enumeration & SSL SAN Leakage -->
+        <article class="card ctf-pro" aria-labelledby="ctf-takeover-title" data-project data-tags="osint,subdomain-takeover,ssl,san,vhost,cloud">
+          <header class="ctf-header">
+            <span class="provider">CTF / Lab</span>
+            <span class="date">2026</span>
+          </header>
+
+          <h3 id="ctf-takeover-title">TakeOver — Subdomain Enumeration & SSL SAN Disclosure</h3>
+
+          <p class="summary">
+            Identificación de riesgo de <em>Subdomain Takeover</em> mediante enumeración de
+            subdominios (VHOST), análisis de certificados SSL (Subject Alternative Names)
+            y detección de redirección hacia un recurso externo en AWS S3 potencialmente
+            no gestionado.
+          </p>
+
+          <div class="badges">
+            <span class="badge">OSINT</span>
+            <span class="badge">VHOST Enum</span>
+            <span class="badge">SSL Analysis</span>
+            <span class="badge">SAN Disclosure</span>
+            <span class="badge">Subdomain Takeover</span>
+            <span class="badge">Cloud Misconfig</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+              <li>
+                <strong>Reconocimiento inicial:</strong> escaneo con <code>nmap</code>
+                identificando servicios SSH (22), HTTP (80) y HTTPS (443) con redirección
+                forzada a TLS.
+              </li>
+
+              <li>
+                <strong>Análisis HTTPS:</strong> inspección del certificado SSL del dominio
+                <code>futurevera.thm</code>, confirmando configuración personalizada.
+              </li>
+
+              <li>
+                <strong>Enumeración de VHOST:</strong> uso de <code>gobuster vhost</code>
+                para identificar el subdominio <code>portal.futurevera.thm</code>.
+              </li>
+
+              <li>
+                <strong>Inferencia contextual:</strong> prueba manual de posibles subdominios
+                (<code>blog</code>, <code>support</code>) basados en contenido del sitio.
+              </li>
+
+              <li>
+                <strong>Análisis del certificado SSL (SAN):</strong> revisión de la sección
+                <em>Subject Alternative Names</em> en <code>support.futurevera.thm</code>,
+                revelando el subdominio interno:
+                <code>secrethelpdesk934752.support.futurevera.thm</code>.
+              </li>
+
+              <li>
+                <strong>Validación del subdominio oculto:</strong> acceso al nuevo host y
+                detección de redirección hacia un endpoint externo en AWS S3.
+              </li>
+
+              <li>
+                <strong>Hallazgo crítico:</strong> escenario típico de <em>Subdomain Takeover</em>,
+                donde un subdominio apunta a un recurso cloud potencialmente no reclamado.
+              </li>
+
+              <li>
+                <strong>Impacto:</strong> posibilidad de secuestro de subdominio,
+                distribución de contenido malicioso y campañas de phishing bajo dominio legítimo.
+              </li>
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">whatweb</span>
+              <span class="tag">gobuster</span>
+              <span class="tag">vhost</span>
+              <span class="tag">ssl cert</span>
+              <span class="tag">san enumeration</span>
+              <span class="tag">aws s3</span>
+              <span class="tag">cloud security</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <!-- Cambiar si publicas el write-up -->
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/TakeOver/report.pdf" target="_blank" rel="noopener">Informe</a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: filtración de subdominios internos vía certificado SSL y
+                riesgo de takeover por apuntar a infraestructura cloud no controlada.
+              </p>
+            </div>
+          </footer>
+        </article>
+        <!-- Vulnversity - File Upload RCE + SUID systemctl PrivEsc -->
+        <article class="card ctf-pro" aria-labelledby="ctf-vulnversity-title" data-project data-tags="linux,web,file-upload,burp,rce,suid,systemctl">
+          <header class="ctf-header">
+            <span class="provider">CTF / Lab</span>
+            <span class="date">2026</span>
+          </header>
+
+          <h3 id="ctf-vulnversity-title">Vulnversity — File Upload Bypass & systemctl Privilege Escalation</h3>
+
+          <p class="summary">
+            Compromiso completo del sistema mediante explotación de una funcionalidad
+            insegura de subida de archivos, bypass de validación de extensiones con Burp Suite,
+            obtención de reverse shell y escalada de privilegios abusando de un binario
+            <code>systemctl</code> con permisos SUID mal configurados.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">Apache</span>
+            <span class="badge">File Upload</span>
+            <span class="badge">Burp Intruder</span>
+            <span class="badge">Reverse Shell</span>
+            <span class="badge">SUID Abuse</span>
+            <span class="badge">Privilege Escalation</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+              <li>
+                <strong>Reconocimiento:</strong> escaneo con <code>nmap</code> identificando
+                servicios FTP (21), SSH (22), SMB (139/445), Squid Proxy (3128)
+                y servicio web Apache en el puerto 3333.
+              </li>
+
+              <li>
+                <strong>Enumeración web:</strong> uso de <code>gobuster</code> para descubrir
+                el directorio oculto <code>/internal/</code>, que contiene un formulario de subida de archivos.
+              </li>
+
+              <li>
+                <strong>Bypass de validación:</strong> interceptación de la petición con
+                Burp Suite e identificación, mediante Intruder, de la extensión permitida
+                <code>.phtml</code>.
+              </li>
+
+              <li>
+                <strong>Obtención de acceso inicial:</strong> subida de <code>php-reverse-shell.phtml</code>
+                y ejecución remota desde el navegador, obteniendo shell como <code>www-data</code>.
+              </li>
+
+              <li>
+                <strong>Post-explotación:</strong> acceso al directorio <code>/home/bill</code>
+                y obtención de la flag de usuario.
+              </li>
+
+              <li>
+                <strong>Enumeración SUID:</strong> búsqueda de binarios con
+                <code>find / -perm -4000</code>, identificando <code>systemctl</code>
+                con permisos inseguros.
+              </li>
+
+              <li>
+                <strong>Escalada de privilegios:</strong> creación de un servicio malicioso
+                (<code>.service</code>) que ejecuta comandos como root y habilitación mediante
+                <code>systemctl</code>.
+              </li>
+
+              <li>
+                <strong>Impacto:</strong> ejecución de comandos como <code>root</code> y acceso
+                a <code>/root/root.txt</code>, confirmando el compromiso total del sistema.
+              </li>
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">gobuster</span>
+              <span class="tag">burp suite</span>
+              <span class="tag">intruder</span>
+              <span class="tag">php reverse shell</span>
+              <span class="tag">nc</span>
+              <span class="tag">find suid</span>
+              <span class="tag">systemctl exploit</span>
+              <span class="tag">linux enum</span>
+            </div>
+
+            <div class="links">
+              <!-- Sustituir si publicas el write-up -->
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/Vulnversity/report.pdf" target="_blank" rel="noopener">Informe</a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: validación insuficiente en subida de archivos y
+                configuración insegura de binarios SUID que permiten escalada directa a root.
+              </p>
+            </div>
+          </footer>
+        </article>
+
+        <!-- Corridor - IDOR via MD5 Object Enumeration -->
+        <article class="card ctf-pro" aria-labelledby="ctf-corridor-title"
+        data-project data-tags="web,idor,access-control,md5,object-enumeration">
+
+          <header class="ctf-header">
+            <span class="provider">TryHackMe</span>
+            <span class="date">2026</span>
+          </header>
+
+          <h3 id="ctf-corridor-title">
+            Corridor — Insecure Direct Object Reference (IDOR)
+          </h3>
+
+          <p class="summary">
+            Identificación de vulnerabilidad IDOR mediante enumeración de identificadores
+            MD5 en URLs. El sistema utilizaba hashes predecibles (MD5 de números secuenciales)
+            sin validación de control de acceso, permitiendo acceder a recursos no enlazados
+            directamente en la interfaz.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Web</span>
+            <span class="badge">IDOR</span>
+            <span class="badge">Access Control</span>
+            <span class="badge">MD5 Enumeration</span>
+            <span class="badge">OWASP A01</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+
+              <li>
+                <strong>Reconocimiento:</strong>
+                Identificación de aplicación web en puerto 80
+                (Werkzeug 2.0.3 – Python 3.10.2).
+              </li>
+
+              <li>
+                <strong>Análisis del código fuente:</strong>
+                Descubrimiento de 13 enlaces cuyos identificadores
+                consistían en valores hexadecimales de 32 caracteres
+                (patrón compatible con MD5).
+              </li>
+
+              <li>
+                <strong>Identificación del patrón:</strong>
+                Verificación de que los hashes correspondían al
+                MD5 de números del 1 al 13.
+              </li>
+
+              <li>
+                <strong>Explotación (Severidad: Media):</strong>
+                Generación manual del MD5 de valores fuera del rango visible
+                (ej. 0 y 14) y acceso directo a la URL:
+                <code>/cfcd208495d565ef66e7dff9f98764da</code>,
+                revelando recurso oculto.
+              </li>
+
+              <li>
+                <strong>Impacto:</strong>
+                Acceso a recursos no autorizados debido a ausencia
+                de validación de control de acceso en el backend.
+                Riesgo potencial de exposición de datos sensibles
+                en entornos reales.
+              </li>
+
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">md5</span>
+              <span class="tag">hash analysis</span>
+              <span class="tag">idor</span>
+              <span class="tag">object enumeration</span>
+              <span class="tag">owasp top 10</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/Corridor/report.pdf" target="_blank" rel="noopener">
+                Informe completo
+              </a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgo clave: uso de identificadores predecibles (MD5 secuencial)
+                sin verificación de autorización en servidor.
+              </p>
+            </div>
+
+          </footer>
+        </article>
+
+        <!-- Easy Peasy - Multi-Stage Enumeration & Cron PrivEsc -->
+        <article class="card ctf-pro" aria-labelledby="ctf-easypeasy-title"
+        data-project data-tags="linux,web,steganography,ssh,cron,privilege-escalation">
+
+          <header class="ctf-header">
+            <span class="provider">TryHackMe</span>
+            <span class="date">2026</span>
+          </header>
+
+          <h3 id="ctf-easypeasy-title">
+            Easy Peasy — Multi-Stage Enumeration & Cron Privilege Escalation
+          </h3>
+
+          <p class="summary">
+            Compromiso completo de servidor Linux mediante enumeración web avanzada,
+            análisis de robots.txt y código fuente, decodificación de hashes y
+            contenido oculto en imagen (steganografía), acceso SSH con credenciales
+            recuperadas y escalada de privilegios explotando tarea cron ejecutada como root.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">Nginx / Apache</span>
+            <span class="badge">Steganography</span>
+            <span class="badge">SSH (6498)</span>
+            <span class="badge">Cron Misconfiguration</span>
+            <span class="badge">Privilege Escalation</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+
+              <li>
+                <strong>Reconocimiento:</strong>
+                Escaneo con <code>nmap</code> identificando:
+                80/tcp (nginx 1.16.1),
+                6498/tcp (OpenSSH 7.6p1) y
+                65524/tcp (Apache 2.4.43).
+              </li>
+
+              <li>
+                <strong>Enumeración web:</strong>
+                Descubrimiento del directorio <code>/hidden</code> mediante
+                <code>gobuster</code>. Análisis del código fuente reveló
+                valores codificados (Base62 / MD5).
+              </li>
+
+              <li>
+                <strong>Descubrimiento de flags y hashes:</strong>
+                Decodificación de cadenas Base62 y análisis de robots.txt
+                (puerto 65524), identificando identificadores MD5 y
+                valores ocultos.
+              </li>
+
+              <li>
+                <strong>Steganografía (Severidad: Media):</strong>
+                Uso de <code>stegseek</code> y <code>steghide</code>
+                sobre <code>binarycodepixabay.jpg</code>,
+                extrayendo archivo <code>secrettext.txt</code>
+                con credenciales embebidas.
+              </li>
+
+              <li>
+                <strong>Acceso inicial:</strong>
+                Conexión SSH como usuario <code>boring</code>
+                en puerto 6498 usando credenciales recuperadas.
+              </li>
+
+              <li>
+                <strong>Escalada de privilegios (Severidad: Crítica):</strong>
+                Análisis de <code>/etc/crontab</code> reveló script ejecutado como root
+                (<code>.mysecretcronjob.sh</code>) modificable.
+                Inyección de reverse shell en script y obtención
+                de shell con privilegios root.
+              </li>
+
+              <li>
+                <strong>Impacto:</strong>
+                Control total del sistema Linux, ejecución arbitraria
+                como root y acceso a datos sensibles.
+              </li>
+
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">gobuster</span>
+              <span class="tag">cyberchef</span>
+              <span class="tag">md5</span>
+              <span class="tag">stegseek</span>
+              <span class="tag">steghide</span>
+              <span class="tag">ssh</span>
+              <span class="tag">cron</span>
+              <span class="tag">reverse shell</span>
+              <span class="tag">linux hardening</span>
+            </div>
+
+            <div class="links">
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/Easy-Peasy/report.pdf" target="_blank" rel="noopener">
+                Informe completo
+              </a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: información sensible expuesta en código fuente,
+                credenciales ocultas en archivo multimedia y cron job ejecutado
+                como root sin validación de integridad.
+              </p>
+            </div>
+
+          </footer>
+        </article>
+
+        <!-- Brooklyn Nine Nine - FTP Exposure & Sudo Misconfiguration -->
+        <article class="card ctf-pro" aria-labelledby="ctf-b99-title"
+        data-project data-tags="linux,ftp,ssh,bruteforce,sudo,gtfobins,privilege-escalation">
+
+          <header class="ctf-header">
+            <span class="provider">TryHackMe</span>
+            <span class="date">2026</span>
+          </header>
+
+          <h3 id="ctf-b99-title">
+            Brooklyn Nine Nine — FTP Exposure & Sudo Privilege Escalation
+          </h3>
+
+          <p class="summary">
+            Compromiso completo de servidor Linux iniciando con acceso FTP anónimo,
+            recuperación de información sensible (hint de contraseña débil),
+            acceso SSH mediante fuerza bruta y escalada de privilegios
+            explotando configuración insegura de sudo sobre el binario <code>less</code>.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">FTP (21/tcp)</span>
+            <span class="badge">SSH (22/tcp)</span>
+            <span class="badge">Weak Password</span>
+            <span class="badge">Sudo Misconfiguration</span>
+            <span class="badge">Privilege Escalation</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+
+              <li>
+                <strong>Reconocimiento:</strong>
+                Escaneo con <code>nmap</code> identificando
+                FTP (vsftpd 3.0.3), SSH (OpenSSH 7.6p1) y Apache 2.4.29.
+              </li>
+
+              <li>
+                <strong>Acceso inicial (Severidad: Media):</strong>
+                FTP permitía login anónimo. Descarga de
+                <code>note_to_jake.txt</code>, revelando que la contraseña
+                del usuario <code>jake</code> era débil.
+              </li>
+
+              <li>
+                <strong>Obtención de credenciales (Severidad: Alta):</strong>
+                Ataque de fuerza bruta contra SSH con <code>hydra</code>
+                utilizando <code>rockyou.txt</code>, obteniendo
+                acceso como <code>jake</code>.
+              </li>
+
+              <li>
+                <strong>Enumeración post-explotación:</strong>
+                Ejecución de <code>sudo -l</code> reveló que el usuario
+                podía ejecutar <code>/usr/bin/less</code> como root
+                sin contraseña.
+              </li>
+
+              <li>
+                <strong>Escalada de privilegios (Severidad: Crítica):</strong>
+                Abuso del binario <code>less</code> (GTFOBins),
+                ejecutando shell interactiva como <code>root</code>
+                mediante <code>sudo less /etc/passwd</code>.
+              </li>
+
+              <li>
+                <strong>Impacto:</strong>
+                Control total del sistema Linux,
+                acceso a archivos sensibles y compromiso completo del host.
+              </li>
+
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">ftp-anon</span>
+              <span class="tag">hydra</span>
+              <span class="tag">ssh</span>
+              <span class="tag">sudo -l</span>
+              <span class="tag">gtfobins</span>
+              <span class="tag">linux hardening</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/Brooklyn-Nine-Nine/report.pdf" target="_blank" rel="noopener">
+                Informe completo
+              </a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: FTP anónimo habilitado, contraseña débil en SSH y
+                configuración insegura de sudo que permite escalada directa a root.
+              </p>
+            </div>
+
+          </footer>
+        </article>
+
+        <!-- Symfonos 1 - WordPress Exploitation & PATH Hijacking -->
+        <article class="card ctf-pro" aria-labelledby="ctf-symfonos1-title"
+        data-project data-tags="linux,samba,wordpress,lfi,rce,suid,path-hijacking,privilege-escalation">
+
+          <header class="ctf-header">
+            <span class="provider">VulnHub</span>
+            <span class="date">2026</span>
+          </header>
+
+          <h3 id="ctf-symfonos1-title">
+            Symfonos 1 — WordPress Exploitation & SUID PATH Hijacking
+          </h3>
+
+          <p class="summary">
+            Compromiso completo de servidor Linux iniciando con enumeración de Samba,
+            descubrimiento de credenciales débiles, explotación de plugin vulnerable
+            en WordPress mediante LFI para obtener RCE, y escalada de privilegios
+            abusando de binario SUID vulnerable a PATH Hijacking.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Linux</span>
+            <span class="badge">Samba (445)</span>
+            <span class="badge">WordPress</span>
+            <span class="badge">LFI → RCE</span>
+            <span class="badge">SUID Abuse</span>
+            <span class="badge">PATH Hijacking</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+
+              <li>
+                <strong>Reconocimiento:</strong>
+                Escaneo con <code>nmap</code> identificando
+                SSH (22), SMTP (25), HTTP (80),
+                y Samba (139/445).
+              </li>
+
+              <li>
+                <strong>Enumeración Samba:</strong>
+                Acceso anónimo al recurso compartido y
+                descarga de <code>attention.txt</code>,
+                revelando uso de contraseñas débiles
+                como <code>qwerty</code>.
+              </li>
+
+              <li>
+                <strong>Descubrimiento de WordPress:</strong>
+                Identificación del directorio <code>/h3l105</code>.
+                Uso de <code>wpscan</code> para enumerar plugins.
+              </li>
+
+              <li>
+                <strong>Explotación (Severidad: Crítica):</strong>
+                Plugin <code>mail-masta</code> vulnerable a LFI:
+                <code>count_of_send.php?pl=/etc/passwd</code>.
+                Escalado a RCE ejecutando reverse shell
+                vía parámetro manipulable.
+              </li>
+
+              <li>
+                <strong>Estabilización de shell:</strong>
+                Uso de <code>python -c 'import pty; pty.spawn("/bin/bash")'</code>
+                para obtener shell interactiva.
+              </li>
+
+              <li>
+                <strong>Escalada de privilegios (Severidad: Crítica):</strong>
+                Enumeración SUID con <code>find / -perm -u=s</code>.
+                Identificación de <code>/opt/statuscheck</code>,
+                binario que invoca <code>curl</code> sin ruta absoluta.
+                Creación de binario falso <code>curl</code> en <code>/tmp</code>
+                y modificación del <code>PATH</code>:
+                <br><code>export PATH=/tmp:$PATH</code><br>
+                Ejecución del binario obteniendo shell como <code>root</code>.
+              </li>
+
+              <li>
+                <strong>Impacto:</strong>
+                Compromiso total del sistema,
+                ejecución arbitraria como root
+                mediante técnica clásica de PATH Hijacking.
+              </li>
+
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+
+            <div class="tags">
+              <span class="tag">nmap</span>
+              <span class="tag">smbclient</span>
+              <span class="tag">wpscan</span>
+              <span class="tag">lfi</span>
+              <span class="tag">reverse shell</span>
+              <span class="tag">find suid</span>
+              <span class="tag">path hijacking</span>
+              <span class="tag">linux hardening</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/VulnHub/Symfonos-1/report.pdf" target="_blank" rel="noopener">
+                Informe completo
+              </a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgos clave: credenciales débiles en entorno SMB,
+                plugin WordPress vulnerable a LFI/RCE y binario SUID
+                inseguro susceptible a PATH Hijacking.
+              </p>
+            </div>
+
+          </footer>
+        </article>
+
+        <!-- WordPress CVE-2021-29447 - XXE to RCE -->
+        <article class="card ctf-pro" aria-labelledby="ctf-wp-cve29447-title"
+        data-project data-tags="wordpress,xxe,cve-2021-29447,file-disclosure,hash-cracking,rce">
+
+          <header class="ctf-header">
+            <span class="provider">TryHackMe</span>
+            <span class="date">2026</span>
+          </header>
+
+          <h3 id="ctf-wp-cve29447-title">
+            WordPress — CVE-2021-29447 (XXE → File Disclosure → RCE)
+          </h3>
+
+          <p class="summary">
+            Explotación de vulnerabilidad XXE (CVE-2021-29447) en WordPress 5.6–5.7
+            ejecutándose sobre PHP 8. Un usuario autenticado con permisos de subida
+            puede explotar el parser XML para obtener lectura arbitraria de archivos,
+            extraer credenciales de base de datos y escalar hacia ejecución remota
+            mediante modificación de plugin.
+          </p>
+
+          <div class="badges">
+            <span class="badge">WordPress</span>
+            <span class="badge">CVE-2021-29447</span>
+            <span class="badge">XXE</span>
+            <span class="badge">File Disclosure</span>
+            <span class="badge">Hash Cracking</span>
+            <span class="badge">RCE</span>
+          </div>
+
+          <div class="steps-wrapper">
+            <ul class="steps">
+
+              <li>
+                <strong>Identificación de vulnerabilidad:</strong>
+                WordPress 5.6–5.7 vulnerable a XXE al procesar archivos
+                multimedia XML cuando se ejecuta en PHP 8.
+              </li>
+
+              <li>
+                <strong>Explotación XXE (Severidad: Alta):</strong>
+                Creación de archivo WAV malicioso que referencia
+                entidad externa (<code>evil.dtd</code>),
+                permitiendo lectura de archivos locales como
+                <code>/etc/passwd</code> y <code>wp-config.php</code>.
+              </li>
+
+              <li>
+                <strong>Obtención de credenciales:</strong>
+                Extracción y decodificación de datos de base de datos
+                desde <code>wp-config.php</code>, revelando:
+                <br><code>DB_USER: thedarktangent</code><br>
+                <code>DB_PASSWORD: sUp3rS3cret132</code>
+              </li>
+
+              <li>
+                <strong>Acceso a base de datos:</strong>
+                Conexión MySQL (puerto 3306) y extracción de hashes
+                de usuarios desde tabla <code>wptry_users</code>.
+              </li>
+
+              <li>
+                <strong>Crackeo de hash (Severidad: Media):</strong>
+                Identificación de formato phpass (WordPress MD5)
+                y crackeo con <code>hashcat -m 400</code>,
+                obteniendo contraseña <code>teddybear</code>.
+              </li>
+
+              <li>
+                <strong>Escalada a RCE (Severidad: Crítica):</strong>
+                Acceso al panel WordPress como usuario privilegiado.
+                Modificación del plugin “Hello Dolly” para insertar
+                reverse shell (PentestMonkey).
+                Ejecución de <code>hello.php</code> y obtención de shell.
+              </li>
+
+              <li>
+                <strong>Impacto:</strong>
+                Lectura arbitraria de archivos,
+                compromiso de base de datos,
+                ejecución remota de comandos y control total del sistema.
+              </li>
+
+            </ul>
+
+            <button class="btn btn-ghost" type="button" data-steps-toggle>
+              Ver más
+            </button>
+          </div>
+
+          <footer class="ctf-footer">
+
+            <div class="tags">
+              <span class="tag">xxe</span>
+              <span class="tag">php 8</span>
+              <span class="tag">wp-config</span>
+              <span class="tag">mysql</span>
+              <span class="tag">hashcat</span>
+              <span class="tag">phpass</span>
+              <span class="tag">reverse shell</span>
+              <span class="tag">owasp</span>
+              <span class="tag">reporting</span>
+            </div>
+
+            <div class="links">
+              <a class="btn" href="https://github.com/TheRubo12/Offensive-Security-WriteUps/blob/main/WriteUps/TryHackMe/WordPress-CVE-2021-29447/report.pdf" target="_blank" rel="noopener">
+                Informe completo
+              </a>
+              <p class="meta" style="margin-top:10px">
+                Hallazgo crítico: parser XML vulnerable permite
+                lectura arbitraria de archivos y escalada a RCE
+                mediante modificación de plugin.
+              </p>
+            </div>
+
+          </footer>
+        </article>
+
+      </div><!-- /.ctf-track -->
+    </div><!-- /.ctf-viewport -->
+
+    <button class="ctf-nav next" type="button" aria-label="CTF siguiente" data-ctf-next>›</button>
+  </div><!-- /.ctf-carousel -->
+
+  <!-- Modal lector (Ver más + navegar) -->
+  <dialog class="ctf-reader" data-ctf-reader>
+    <div class="ctf-reader__inner">
+      <button class="ctf-reader__close btn btn-ghost" type="button" aria-label="Cerrar" data-ctf-close>
+        Cerrar ✕
+      </button>
+
+      <button class="ctf-reader__nav prev" type="button" aria-label="Anterior" data-ctf-reader-prev>‹</button>
+      <button class="ctf-reader__nav next" type="button" aria-label="Siguiente" data-ctf-reader-next>›</button>
+
+      <div class="ctf-reader__content" data-ctf-reader-content></div>
+    </div>
+  </dialog>
 </section>
 
 
@@ -1376,7 +2898,19 @@
     <section id="trayectoria" aria-labelledby="trayectoria-title">
       <h2 id="trayectoria-title">Formación y logros</h2>
       <ul class="timeline">
-        <li><div class="when">2025</div><strong>eJPTv2 (INE) — en progreso</strong><div class="meta">Pentesting: redes, web, post-explotación y reporting</div></li>
+        <li>
+          <div class="when">2026</div>
+          <strong>eJPTv2 — INE Security</strong>
+          <div class="meta">
+            Enumeración, explotación de servicios,
+            pivoting, post-explotación y elaboración de informes técnicos ·
+            <a href="https://certs.ine.com/b8b6b507-0e11-4607-b86b-5f84404af7e1#acc.kEahyK4c" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              Ver credencial oficial
+            </a>
+          </div>
+        </li>
         <li><div class="when">2025 · 08 Sep</div><strong>Cisco Networking Academy — Insignia: Carrera Profesional de Analista Junior en Ciberseguridad</strong><div class="meta">Evaluación de la ruta completa de ciberseguridad · badge obtenido</div></li>
         <li><div class="when">2025</div><strong>Ciberseguridad Avanzada en Entornos TO (120h) — completado</strong><div class="meta">Segmentación/securización de dispositivos conectados y ciberejercicios</div></li>
         <li><div class="when">2024</div><strong>Cisco — Introducción a la Ciberseguridad</strong><div class="meta">Fundamentos, amenazas y buenas prácticas</div></li>
@@ -1475,4 +3009,3 @@
 
 </body>
 </html>
-
