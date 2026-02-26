@@ -247,7 +247,7 @@ window.filterProjects = function filterProjects(tag, el) {
       btn.__wired = true;
 
       const article = btn.closest('article');
-      if (!article) return;
+      if (article && article.classList.contains('ctf-pro')) return;
 
       const steps = article.querySelector('.steps');
       if (!steps) return;
@@ -359,4 +359,99 @@ document.addEventListener('DOMContentLoaded', initMobileMenu);
   });
 })();
 
+/* ===== CTF Carousel + Expand inline ===== */
+(() => {
+  function initCtfCarouselInline() {
+    const carousel = document.querySelector('[data-ctf-carousel]');
+    if (!carousel) return;
 
+    const track = carousel.querySelector('[data-ctf-track]');
+    const btnPrev = carousel.querySelector('[data-ctf-prev]');
+    const btnNext = carousel.querySelector('[data-ctf-next]');
+    if (!track) return;
+
+    const cards = Array.from(track.querySelectorAll('article.ctf-pro'));
+    if (!cards.length) return;
+
+    // Cierra todas excepto una
+    function closeAll(exceptCard) {
+      cards.forEach(card => {
+        if (exceptCard && card === exceptCard) return;
+        card.dataset.open = "false";
+        const b = card.querySelector('[data-steps-toggle]');
+        if (b) b.textContent = "Ver más";
+      });
+    }
+
+    // Toggle de una card
+    function toggleCard(card) {
+      const isOpen = card.dataset.open === "true";
+      closeAll(card); // comportamiento tipo acordeón (una abierta)
+      card.dataset.open = isOpen ? "false" : "true";
+
+      const b = card.querySelector('[data-steps-toggle]');
+      if (b) b.textContent = isOpen ? "Ver más" : "Ver menos";
+
+      // centra en viewport cuando abres
+      if (!isOpen) {
+        card.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      }
+    }
+
+    // Scroll por card
+    function scrollByCard(dir) {
+      const first = cards[0];
+      if (!first) return;
+      const gap = 14; // igual que CSS
+      const w = first.getBoundingClientRect().width + gap;
+      track.scrollBy({ left: dir * w, behavior: 'smooth' });
+    }
+
+    if (btnPrev) btnPrev.addEventListener('click', () => scrollByCard(-1));
+    if (btnNext) btnNext.addEventListener('click', () => scrollByCard(1));
+
+    // Click "Ver más" -> expand inline (sin popup)
+    track.addEventListener('click', (e) => {
+      const toggleBtn = e.target.closest('[data-steps-toggle]');
+      if (!toggleBtn) return;
+
+      const card = e.target.closest('article.ctf-pro');
+      if (!card) return;
+
+      e.preventDefault();
+      toggleCard(card);
+    });
+
+    // Navegación inline dentro de la card (si añadiste botones)
+    track.addEventListener('click', (e) => {
+      const prevBtn = e.target.closest('[data-ctf-inline-prev]');
+      const nextBtn = e.target.closest('[data-ctf-inline-next]');
+      if (!prevBtn && !nextBtn) return;
+
+      const card = e.target.closest('article.ctf-pro');
+      if (!card) return;
+
+      e.preventDefault();
+      const idx = cards.indexOf(card);
+      const nextIdx = prevBtn
+        ? (idx - 1 + cards.length) % cards.length
+        : (idx + 1) % cards.length;
+
+      const target = cards[nextIdx];
+      closeAll(target);
+      target.dataset.open = "true";
+      const b = target.querySelector('[data-steps-toggle]');
+      if (b) b.textContent = "Ver menos";
+      target.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    });
+
+    // Estado inicial: todo cerrado
+    closeAll(null);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCtfCarouselInline, { once: true });
+  } else {
+    initCtfCarouselInline();
+  }
+})();
